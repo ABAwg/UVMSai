@@ -1,0 +1,13 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "request_id": "ad2cab39-8a09-45c3-a569-73883c137964",
+  "prompt": "Ответь одним словом: READY",
+  "result": "BLOCKED",
+  "error_code": "configuration",
+  "provider_attempts": 0,
+  "assistant_messages": 0,
+  "browser": "headed Google Chrome",
+  "retry_visible": true,
+  "screenshot": "ready.png"
+}

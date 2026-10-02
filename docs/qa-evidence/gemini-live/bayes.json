@@ -1,0 +1,26 @@
+{
+  "id": "bayes",
+  "prompt": "На фабрике 1% изделий дефектные. Детектор помечает 95% дефектных и 5% исправных изделий. Какова вероятность дефекта при положительном сигнале? Выведи формулу Байеса и проверь результат на 10000 изделий. Отличай чувствительность теста от искомой вероятности.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "67dc6b3a-366d-4da8-bb87-2c873a1ec0e1",
+  "chatId": "42c22bf4-062e-4bd1-a312-3b00ac0e0a9b",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=42c22bf4-062e-4bd1-a312-3b00ac0e0a9b",
+  "durationMs": 12572,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

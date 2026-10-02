@@ -1,0 +1,32 @@
+{
+  "id": "ready-browser",
+  "prompt": "Ответь одним словом: READY",
+  "provider": "gemini",
+  "quality": "PASS",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "e6dfa576-aca9-4757-9735-f117cab76230",
+  "chatId": "454e8351-3710-4f91-81f2-75ed677d4ab2",
+  "answer": "READY",
+  "error": "",
+  "sseEvents": [
+    "meta",
+    "delta",
+    "done"
+  ],
+  "transport": "COMPLETE",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [
+    {
+      "ms": 5801,
+      "length": 5
+    }
+  ],
+  "chatUrl": "http://localhost:3002/?chat=454e8351-3710-4f91-81f2-75ed677d4ab2",
+  "durationMs": 8473,
+  "upstream_http_status": null,
+  "review": "Exactly READY; completed provider accounting. Endpoint and credential isolation separately observed in direct READY probe."
+}

@@ -1,0 +1,16 @@
+{
+  "quality": "FAIL",
+  "syntaxDiagnostics": [
+    {
+      "code": 1005,
+      "message": "'}' expected.",
+      "offset": 2566
+    }
+  ],
+  "findings": [
+    "The returned Search function has no closing brace or JSX return.",
+    "Clearing term does not increment requestId or check signal.aborted before setResults: an already-resolved previous request can repopulate cleared results.",
+    "mounted.current becomes false during React StrictMode effect cleanup and is never reset to true on setup."
+  ],
+  "source": "Unmodified actual Groq response code, checked against persisted raw Markdown; no application code altered to repair the answer."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "uz",
+  "prompt": "O‘zbek tilida tabiiy va texnik jihatdan aniq javob bering. Uy ustaxonasida 18 V manbaga ketma-ket ulangan 6 Ω va 3 Ω rezistorlar bor. Umumiy qarshilik, tok kuchi, har bir rezistordagi kuchlanish va quvvatni hisoblang; quvvatlar yig‘indisini manba quvvati bilan tekshiring. Keyin bu rezistorlar parallel ulanganida jami tok qanday o‘zgarishini izohlang. Tok kuchi, kuchlanish va energiyani chalkashtirmang. Yakunda qo‘shnini shanbadagi ta’mirlash ustaxonasiga taklif qiluvchi uchta tabiiy jumla yozing.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "baf97906-6f18-49e2-8942-7f308e9b76b8",
+  "chatId": "857f0321-4b5b-4063-b4ff-2db8516a883f",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=857f0321-4b5b-4063-b4ff-2db8516a883f",
+  "durationMs": 15314,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

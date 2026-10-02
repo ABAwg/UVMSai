@@ -1,0 +1,2 @@
+import Image from 'next/image';
+export default function NotFound(){return <main className="auth-page"><section className="auth-card glass"><div className="brand brand-large"><Image src="/uvms-logo.png" width={52} height={52} alt="UVMS"/><div><strong>UVMS <span>AI</span></strong><small>404</small></div></div><h1>Page not found</h1><p className="muted">The page may have moved or the link is incorrect.</p><a href="/" className="primary-btn reset-link">Back to UVMS AI</a></section></main>}

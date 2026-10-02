@@ -1,0 +1,3 @@
+'use client';
+import Image from 'next/image';
+export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <main className="auth-page"><section className="auth-card glass"><div className="brand brand-large"><Image src="/uvms-logo.png" width={52} height={52} alt="UVMS"/><div><strong>UVMS <span>AI</span></strong><small>RECOVERY</small></div></div><h1>Something went wrong</h1><p className="muted">The interface hit an unexpected error. Your account data is stored on the backend.</p><button className="primary-btn" onClick={reset}>Try again</button><a href="/" className="link-btn reset-link">Return home</a></section></main>}

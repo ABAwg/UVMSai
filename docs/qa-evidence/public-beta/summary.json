@@ -1,0 +1,91 @@
+{
+  "version": "1.4.3",
+  "scope": "Groq Public Beta; Qwen/Vision/image generation/search/billing disabled; Uzbek AI uncertified",
+  "tested_dates": [
+    "2026-09-30",
+    "2026-10-02"
+  ],
+  "application_ready": true,
+  "public_deployment": "BLOCKED_BY_EXTERNAL_CREDENTIALS",
+  "public_url": null,
+  "provider": "groq",
+  "text_model": "openai/gpt-oss-120b",
+  "voice_model": "whisper-large-v3-turbo",
+  "actual_http_requests": 18,
+  "http_200": 18,
+  "observed_429": 0,
+  "observed_5xx": 0,
+  "latest_text_rate_snapshot": {
+    "x-ratelimit-remaining-requests": "999",
+    "x-ratelimit-remaining-tokens": "7537",
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-reset-requests": "1m26.4s",
+    "x-ratelimit-reset-tokens": "3.472s"
+  },
+  "rate_snapshot_is_not_current_balance": true,
+  "quality": "PASS for final Beta critical flows; initial Fast integral failure retained; no model infallibility claim",
+  "backend": {
+    "unique_tests": 202,
+    "full_run_passed": 201,
+    "subsequent_targeted_passed": 45,
+    "new_diagnostic_test_in_targeted_run": 1
+  },
+  "web_unit": 16,
+  "browser_e2e": 25,
+  "mobile_sse": 2,
+  "expo_doctor": "21/21",
+  "mobile_typecheck": "PASS",
+  "web_typecheck": "PASS",
+  "web_production_build": "PASS",
+  "mobile_android_ios_export": "PASS",
+  "python_compile": "PASS",
+  "pip_check": "PASS",
+  "alembic_postgresql": "PASS",
+  "docker_services_healthy": 5,
+  "production_local_https_sse_paints": 105,
+  "critical_flows": {
+    "AUTH": "PASS",
+    "CHAT": "PASS",
+    "SSE": "PASS",
+    "STOP": "PASS",
+    "RETRY": "PASS",
+    "FILES": "PASS",
+    "PROJECTS": "PASS",
+    "MEMORY": "PASS",
+    "CHARTS": "PASS",
+    "VOICE": "PASS",
+    "RU": "PASS",
+    "EN": "PASS",
+    "basic_coding": "PASS",
+    "math_final": "PASS",
+    "physics_final": "PASS",
+    "two_tabs": "PASS",
+    "mobile_390_360": "PASS"
+  },
+  "security": "PASS in tested public Web/API scope; see report for excluded mobile tooling audit",
+  "known_p0": 0,
+  "known_p1_public_scope": 0,
+  "secret_scan": {
+    "status": "PASS",
+    "source_files": 316,
+    "web_production_files": 94,
+    "docker_web_production_files": 92,
+    "mobile_export_files": 4,
+    "expo_public_config": "PASS",
+    "exact_private_env_and_qa_credentials": true,
+    "encodings": [
+      "UTF-8",
+      "UTF-16LE"
+    ],
+    "matches": 0
+  },
+  "release_verifier": "PASS working-tree and clean staged archive",
+  "external_requirements": [
+    "Target server IP and SSH access",
+    "Public domain and DNS control",
+    "Server-side secret provisioning; fresh JWT/DB/metrics values can be generated using runbook"
+  ],
+  "archive": "UVMS-AI-v1.4.3-public-beta-production.zip",
+  "archive_private_paths": 0
+}

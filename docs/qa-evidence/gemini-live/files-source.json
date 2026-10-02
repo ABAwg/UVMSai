@@ -1,0 +1,26 @@
+{
+  "id": "files-source",
+  "prompt": "Use only these attachments, citing filenames. Extract the retention value from JSON. Diagnose the source code bug and give a corrected function. From the long report, identify the owner, earlier proposed retention and FINAL DECISION retention; distinguish proposal from final approval and mention any omitted text.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "8d6418fc-e557-464c-a931-5615e0911974",
+  "chatId": "7bea1789-6dc2-41f2-ab97-c0eb5673c94d",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=7bea1789-6dc2-41f2-ab97-c0eb5673c94d",
+  "durationMs": 7979,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

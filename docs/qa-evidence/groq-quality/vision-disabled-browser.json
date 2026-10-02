@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "provider": "groq",
+  "vision_enabled": false,
+  "badge": true,
+  "image_rejected": true,
+  "document_attach_available": true,
+  "provider_requests": 0
+}

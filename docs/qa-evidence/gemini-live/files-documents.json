@@ -1,0 +1,26 @@
+{
+  "id": "files-documents",
+  "prompt": "Use only these attached files and cite filenames. Extract the project migration window, owner and fallback color from the TXT and DOCX. Report the retention percentage from the PDF. List all monthly revenues and compute the total separately for the CSV and XLSX, explicitly including any negative entry. State whether the two tables agree.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "f7b69acf-1104-46f3-94c2-4250ccc51b60",
+  "chatId": "ed0447b6-200a-4658-b643-9819fe485b05",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=ed0447b6-200a-4658-b643-9819fe485b05",
+  "durationMs": 7384,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

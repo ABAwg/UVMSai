@@ -1,0 +1,205 @@
+{
+  "id": "coding-react",
+  "prompt": "A React/TypeScript search component fetches /api/search?q=term in useEffect([term]) and older responses sometimes replace newer results. Show a concise typed fix handling response.ok, errors, unmount, and empty terms. Explain why AbortController alone may not prevent a stale already-resolved promise from updating state. State the UI behavior while a request is pending.",
+  "provider": "gemini",
+  "quality": "PASS",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "d63d7276-0494-4d00-9d21-8e2f3bcea690",
+  "chatId": "9668be5b-f4d1-4f9a-80ad-53201b340803",
+  "answer": "TypeScript Solution\ntsx\nCopy\nimport React, { useState, useEffect } from 'react';\n\ninterface SearchResult {\n  id: string;\n  title: string;\n}\n\nexport const SearchComponent: React.FC<{ term: string }> = ({ term }) => {\n  const [results, setResults] = useState<SearchResult[]>([]);\n  const [isLoading, setIsLoading] = useState<boolean>(false);\n  const [error, setError] = useState<string | null>(null);\n\n  useEffect(() => {\n    const query = term.trim();\n\n    // 1. Handle empty term: clear state and do not fetch\n    if (!query) {\n      setResults([]);\n      setError(null);\n      setIsLoading(false);\n      return;\n    }\n\n    const controller = new AbortController();\n    const { signal } = controller;\n\n    const performSearch = async () => {\n      setIsLoading(true);\n      setError(null);\n\n      try {\n        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`, { signal });\n\n        if (!res.ok) {\n          throw new Error(`HTTP error: ${res.status} ${res.statusText}`);\n        }\n\n        const data: SearchResult[] = await res.json();\n\n        // 2. Guard state update against aborts completed during JSON parsing\n        if (!signal.aborted) {\n          setResults(data);\n        }\n      } catch (err: unknown) {\n        // Silently exit if request was cancelled/aborted\n        if (signal.aborted || (err instanceof DOMException && err.name === 'AbortError')) {\n          return;\n        }\n        setError(err instanceof Error ? err.message : 'An unexpected error occurred');\n      } finally {\n        if (!signal.aborted) {\n          setIsLoading(false);\n        }\n      }\n    };\n\n    performSearch();\n\n    // 3. Cleanup on term change or unmount\n    return () => {\n      controller.abort();\n    };\n  }, [term]);\n\n  return (\n    <div>\n      {isLoading && <p role=\"status\">Loading results...</p>}\n      {error && <p role=\"alert\" style={{ color: 'red' }}>{error}</p>}\n      {!isLoading && !error && results.length === 0 && term.trim() && (\n        <p>No results found.</p>\n      )}\n      <ul>\n        {results.map((item) => (\n          <li key={item.id}>{item.title}</li>\n        ))}\n      </ul>\n    </div>\n  );\n};\n\n---\n\nWhy AbortController Alone May Not Prevent Stale State Updates\n\nAbortController.abort() cancels the in-flight network I/O. It does not inherently prevent race conditions in the microtask queue once the response has arrived:\n\nWindow between response resolution and parsing: If the network transfer finishes right before the user types the next character, fetch() resolves successfully. If cleanup runs after fetch() resolves but while await res.json() or downstream data processing is pending in the microtask queue, an abort may not cancel non-network JavaScript execution.\nMissing checks before `setState`: Unless you explicitly verify !signal.aborted (or track a boolean flag like let isActive = true) before calling state setters, the queued resolution microtasks will execute and call setResults() with stale data from the older, resolved response.\n\n---\n\nUI Behavior While a Request Is Pending\n`isLoading === true`: The UI communicates an active search via an inline loader, spinner, or skeleton placeholder.\nResult retention: Existing results can remain visible (often dimmed or paired with a subtle loading indicator) to avoid layout shift/flicker while waiting for new results.\nImmediate clearing on empty input: If term is cleared, isLoading turns false immediately and results are cleared synchronously without waiting on network cancellation.\nError clearing: Any prior error message is cleared as soon as a new request is dispatched.",
+  "error": "",
+  "sseEvents": [
+    "meta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "done"
+  ],
+  "transport": "COMPLETE",
+  "code": [
+    "import React, { useState, useEffect } from 'react';\n\ninterface SearchResult {\n  id: string;\n  title: string;\n}\n\nexport const SearchComponent: React.FC<{ term: string }> = ({ term }) => {\n  const [results, setResults] = useState<SearchResult[]>([]);\n  const [isLoading, setIsLoading] = useState<boolean>(false);\n  const [error, setError] = useState<string | null>(null);\n\n  useEffect(() => {\n    const query = term.trim();\n\n    // 1. Handle empty term: clear state and do not fetch\n    if (!query) {\n      setResults([]);\n      setError(null);\n      setIsLoading(false);\n      return;\n    }\n\n    const controller = new AbortController();\n    const { signal } = controller;\n\n    const performSearch = async () => {\n      setIsLoading(true);\n      setError(null);\n\n      try {\n        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`, { signal });\n\n        if (!res.ok) {\n          throw new Error(`HTTP error: ${res.status} ${res.statusText}`);\n        }\n\n        const data: SearchResult[] = await res.json();\n\n        // 2. Guard state update against aborts completed during JSON parsing\n        if (!signal.aborted) {\n          setResults(data);\n        }\n      } catch (err: unknown) {\n        // Silently exit if request was cancelled/aborted\n        if (signal.aborted || (err instanceof DOMException && err.name === 'AbortError')) {\n          return;\n        }\n        setError(err instanceof Error ? err.message : 'An unexpected error occurred');\n      } finally {\n        if (!signal.aborted) {\n          setIsLoading(false);\n        }\n      }\n    };\n\n    performSearch();\n\n    // 3. Cleanup on term change or unmount\n    return () => {\n      controller.abort();\n    };\n  }, [term]);\n\n  return (\n    <div>\n      {isLoading && <p role=\"status\">Loading results...</p>}\n      {error && <p role=\"alert\" style={{ color: 'red' }}>{error}</p>}\n      {!isLoading && !error && results.length === 0 && term.trim() && (\n        <p>No results found.</p>\n      )}\n      <ul>\n        {results.map((item) => (\n          <li key={item.id}>{item.title}</li>\n        ))}\n      </ul>\n    </div>\n  );\n};"
+  ],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [
+    {
+      "ms": 8785,
+      "length": 10
+    },
+    {
+      "ms": 8837,
+      "length": 206
+    },
+    {
+      "ms": 8889,
+      "length": 278
+    },
+    {
+      "ms": 8937,
+      "length": 389
+    },
+    {
+      "ms": 9028,
+      "length": 475
+    },
+    {
+      "ms": 9100,
+      "length": 572
+    },
+    {
+      "ms": 9150,
+      "length": 662
+    },
+    {
+      "ms": 9200,
+      "length": 774
+    },
+    {
+      "ms": 9261,
+      "length": 890
+    },
+    {
+      "ms": 9539,
+      "length": 968
+    },
+    {
+      "ms": 9572,
+      "length": 1072
+    },
+    {
+      "ms": 9612,
+      "length": 1186
+    },
+    {
+      "ms": 9663,
+      "length": 1287
+    },
+    {
+      "ms": 9737,
+      "length": 1377
+    },
+    {
+      "ms": 9897,
+      "length": 1492
+    },
+    {
+      "ms": 9959,
+      "length": 1572
+    },
+    {
+      "ms": 10009,
+      "length": 1656
+    },
+    {
+      "ms": 10060,
+      "length": 1728
+    },
+    {
+      "ms": 10129,
+      "length": 1821
+    },
+    {
+      "ms": 10258,
+      "length": 1914
+    },
+    {
+      "ms": 10343,
+      "length": 2011
+    },
+    {
+      "ms": 10385,
+      "length": 2098
+    },
+    {
+      "ms": 10486,
+      "length": 2201
+    },
+    {
+      "ms": 10549,
+      "length": 2309
+    },
+    {
+      "ms": 10646,
+      "length": 2431
+    },
+    {
+      "ms": 10844,
+      "length": 2562
+    },
+    {
+      "ms": 11060,
+      "length": 2674
+    },
+    {
+      "ms": 11234,
+      "length": 2787
+    },
+    {
+      "ms": 11312,
+      "length": 2905
+    },
+    {
+      "ms": 11460,
+      "length": 3019
+    },
+    {
+      "ms": 11648,
+      "length": 3141
+    },
+    {
+      "ms": 11768,
+      "length": 3273
+    },
+    {
+      "ms": 11863,
+      "length": 3366
+    },
+    {
+      "ms": 12088,
+      "length": 3495
+    },
+    {
+      "ms": 12238,
+      "length": 3569
+    }
+  ],
+  "chatUrl": "http://localhost:3002/?chat=9668be5b-f4d1-4f9a-80ad-53201b340803",
+  "durationMs": 14410,
+  "upstream_http_status": 200,
+  "review": "Reviewed typed fetch, HTTP errors, empty input, abort guards and cleanup; five behavioral checks passed. 35 increasing DOM paints over 3453 ms."
+}

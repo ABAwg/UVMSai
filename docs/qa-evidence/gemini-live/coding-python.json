@@ -1,0 +1,26 @@
+{
+  "id": "coding-python",
+  "prompt": "Debug this Python function: def average(values): return sum(values)/(len(values)-1). Explain the numerical error for [2,4,6] and implement a corrected average(iterable) accepting a generator, raising ValueError on empty input. Include concise executable unittest tests for empty, one item, generator and negative values; do not claim you ran them. Separately, in FastAPI an authenticated /documents/{id} does db.get(Document,id) and returns it; give a safe SQLAlchemy ownership check that returns the same 404 for another user’s document and a missing document. Keep the code coherent and mention the relevant authorization issue.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "65387017-2fea-4490-a4bc-206444a9672c",
+  "chatId": "55a82d04-75fd-4ab3-b21f-7c731d8ebe43",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=55a82d04-75fd-4ab3-b21f-7c731d8ebe43",
+  "durationMs": 4369,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

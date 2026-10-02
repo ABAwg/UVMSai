@@ -1,0 +1,13 @@
+{
+  "id": "flow-project-resume",
+  "provider": "groq",
+  "quality": "PASS",
+  "requestId": "fef66828-23c3-4b0e-94d8-670a990b4ea5",
+  "chatId": "7673b094-ebea-4e30-9232-567d952ca271",
+  "answer": "GROQ-CHECK-527  \n\nMigration window: 17 minutes\nRollback owner: Mira\nFallback color: amber\n\nSource: notes.txt (Project Nacre section).",
+  "error": "",
+  "chatUrl": "http://localhost:3002/?chat=7673b094-ebea-4e30-9232-567d952ca271",
+  "reloadContext": true,
+  "harnessCorrection": "Wait for creation busy state to end before setting upload input; initial attempt made no provider request.",
+  "review": "Project instruction prefix GROQ-CHECK-527 and file facts 17/Mira/amber with notes.txt citation; reload retained project. Initial harness set disabled input before create busy finished; no first upstream request."
+}

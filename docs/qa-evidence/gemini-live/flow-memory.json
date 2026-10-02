@@ -1,0 +1,19 @@
+{
+  "id": "flow-memory",
+  "provider": "gemini",
+  "quality": "PASS",
+  "enabled": {
+    "requestId": "07bd9e96-3c83-4e22-b370-d9988efd90c3",
+    "chatId": "b11c0e2e-2a13-418e-b284-d0726e3a8e9f",
+    "answer": "Amber Quasar 907",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=b11c0e2e-2a13-418e-b284-d0726e3a8e9f"
+  },
+  "disabled": {
+    "requestId": "15023011-a9d5-4f4c-ab98-984c973d2388",
+    "chatId": "88e041bb-b554-42c1-87b6-adb89fb9d01b",
+    "answer": "UNKNOWN",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=88e041bb-b554-42c1-87b6-adb89fb9d01b"
+  }
+}

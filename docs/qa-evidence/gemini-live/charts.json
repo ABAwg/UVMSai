@@ -1,0 +1,26 @@
+{
+  "id": "charts",
+  "prompt": "Render four separate charts preserving these exact values: line Jan=120, Feb=150, Mar=-20, Apr=310; bar North=12, South=-4, East=8; pie Workshops=50, Repairs=30, Donations=20; scatter A=(1,2), B=(2,5), C=(3,4). Use chart fenced JSON blocks with type,title,data, and label/value for line/bar/pie, label/x/y for scatter. Explain briefly why the signed regional values are unsuitable for a pie chart. Do not output a tool call.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "537c4736-5591-45fa-af32-269eec832c29",
+  "chatId": "bcd645c6-b168-4f06-8692-3bde9b5d4f4e",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=bcd645c6-b168-4f06-8692-3bde9b5d4f4e",
+  "durationMs": 4380,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

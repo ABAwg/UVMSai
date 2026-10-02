@@ -1,0 +1,18 @@
+{
+  "python_returned_tests": {
+    "exit_code": 0,
+    "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK",
+    "additional_edge_checks": 3
+  },
+  "independent_numbers": {
+    "integral_simpson": 0.2499999999999996,
+    "integral_exact": "1/4",
+    "bayes_fraction": "19/118",
+    "bayes_percent": 16.101694915254235,
+    "physics_acceleration_m_s2": 3.205858157774931,
+    "physics_speed_m_s": 5.662029810743609,
+    "physics_friction_work_J": -16.99141842225069,
+    "physics_stopping_distance_m": 6.535898384862244
+  },
+  "provider_requests": 0
+}

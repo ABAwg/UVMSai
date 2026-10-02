@@ -1,0 +1,34 @@
+{
+  "id": "flow-retry-errors",
+  "provider": "groq",
+  "quality": "PASS",
+  "errors": [
+    {
+      "code": "rate_limit",
+      "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    },
+    {
+      "code": "timeout",
+      "error": "The response took too long. Try again.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    },
+    {
+      "code": "upstream_error",
+      "error": "The AI service returned an error. Please try again.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    }
+  ],
+  "recovered": {
+    "requestId": "b0a5fcdf-6a51-4607-a10f-94d5a3bbaa76",
+    "chatId": "f90fe0be-eccd-4531-aaea-9971876b0fc6",
+    "answer": "RETRY-OK",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=f90fe0be-eccd-4531-aaea-9971876b0fc6"
+  },
+  "userMessages": 1,
+  "review": "Three explicitly synthetic safe-error UI fixtures; final real Retry returned RETRY-OK with one user message. No actual Groq 429 observed."
+}

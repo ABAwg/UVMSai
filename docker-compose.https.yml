@@ -1,0 +1,20 @@
+# Requires Compose 2.24.4+ for !override. Bootstrap the certificate before enabling nginx here.
+services:
+  nginx:
+    ports: !override ["80:80", "443:443"]
+    environment:
+      UVMS_DOMAIN: ${UVMS_DOMAIN:?Set the public domain}
+      NGINX_ENVSUBST_FILTER: ^UVMS_DOMAIN$
+    volumes: !override
+      - ./deploy/nginx/https.conf.template:/etc/nginx/templates/default.conf.template:ro
+      - uvms_certificates:/etc/letsencrypt:ro
+      - uvms_acme:/var/www/certbot:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --no-check-certificate -O- https://127.0.0.1/live >/dev/null 2>&1 || exit 1"]
+  certbot:
+    image: certbot/certbot:v5.8.0
+    profiles: [tls]
+    volumes:
+      - uvms_certificates:/etc/letsencrypt
+      - uvms_acme:/var/www/certbot
+    networks: [frontend]

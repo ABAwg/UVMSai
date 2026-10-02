@@ -1,0 +1,32 @@
+{
+  "version": "1.4.2",
+  "date": "2026-09-28",
+  "backend_tests": 126,
+  "web_unit_tests": 16,
+  "browser_e2e_tests": 23,
+  "mobile_sse_tests": 2,
+  "expo_doctor_checks": 21,
+  "typescript": {
+    "web": "PASS",
+    "mobile": "PASS"
+  },
+  "web_production_build": "PASS",
+  "docker_api_web_build": "PASS",
+  "sqlite_postgresql_migrations": "e2c7c0d4a4b1; no drift",
+  "frontend_secret_matches": 0,
+  "live_provider": "openrouter/free",
+  "live_quality": "PARTIAL / FAIL for some tasks",
+  "integral_bayes": "PROVIDER LIMITATION: no accepted live answer; readable timeout + Retry; no stuck spinner",
+  "uzbek": "FAIL: inaccurate terminology and unnatural/nonsensical language",
+  "long_document": "PASS after head/tail fix, restart and provider retry: Salima, 65%, 78%",
+  "charts": "PASS final line/bar/pie/scatter render; earlier provider-format/timeout failures retained",
+  "release_archive": "PASS",
+  "external_certification": "NOT VERIFIED — EXTERNAL/PHYSICAL REQUIREMENT",
+  "physical_mobile": "PHYSICAL DEVICE QA REQUIRED",
+  "live_provider_role": "Development QA only; free OpenRouter is not a production model",
+  "release_working_tree": "PASS",
+  "final_secret_scan": "PASS: zero exact configured/runtime QA secret matches",
+  "source_file_count": 194,
+  "scanned_frontend_files": 94,
+  "zip_name": "UVMS-AI-v1.4.2-final-live-qa.zip"
+}

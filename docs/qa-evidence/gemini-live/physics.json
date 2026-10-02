@@ -1,0 +1,26 @@
+{
+  "id": "physics",
+  "prompt": "A 2 kg block starts from rest and slides 5 m down a 30° incline with kinetic friction coefficient 0.2. It then enters a horizontal surface with coefficient 0.25 and stops. Use g=9.81 m/s². Calculate incline acceleration, bottom speed, friction work on the incline and horizontal stopping distance. Cross-check the speed using energy conservation; state assumptions, signs and units.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "bd4c3ca9-190b-4513-9a38-aaf5c7757e8c",
+  "chatId": "1fe7ad9d-f440-4530-b58a-1af5c19499a6",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=1fe7ad9d-f440-4530-b58a-1af5c19499a6",
+  "durationMs": 8732,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

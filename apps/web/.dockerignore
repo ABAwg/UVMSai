@@ -1,0 +1,13 @@
+node_modules
+.next
+.next-qa
+.next-e2e
+coverage
+test-results
+playwright-report
+*.tsbuildinfo
+npm-debug.log*
+.env
+.env.*
+!.env.example
+.DS_Store

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "uz-everyday",
+    "prompt": "Men ish kunlari soat 9 dan 18 gacha bandman. Uyga kelgach charchayman, lekin har kuni ovqat tayyorlash va yarim soat sayr qilishni xohlayman. Menga bajarish oson bo‘lgan kechki tartib taklif qiling. Nega aynan shu tartib foydali ekanini tushuntiring va qo‘shnimni shanba kungi sayrga uchta tabiiy jumla bilan taklif qiling. 180 so‘zdan oshmasin."
+  },
+  {
+    "id": "uz-it",
+    "prompt": "Bizning kichik jamoamiz mijozlar ma’lumotlarini noutbuklarda saqlaydi. Zaxira nusxa olish bilan fayllarni sinxronlash orasidagi farqni oddiy misollar bilan tushuntiring. Tasodifan o‘chirilgan fayl sinxronlangan qurilmalardan ham yo‘qolsa, qanday tiklash mumkin? Uch bosqichli amaliy reja bering, noma’lum servis imkoniyatlarini o‘ylab topmang. 220 so‘z atrofida."
+  },
+  {
+    "id": "uz-physics",
+    "prompt": "Uy ustaxonasida 18 V manbaga ketma-ket ulangan 6 Ω va 3 Ω rezistorlar bor. Umumiy qarshilik, tok kuchi, har bir rezistordagi kuchlanish va quvvatni hisoblang. Quvvat bilan energiya orasidagi farqni birliklari bilan tushuntiring. Tizim 10 soniya ishlasa qancha energiya sarflanadi? Keyin rezistorlar parallel ulanganda jami tokni hisoblang. Natijani oddiy va ravon tushuntiring."
+  },
+  {
+    "id": "uz-networking",
+    "prompt": "Uyimizdagi Wi-Fi tarmog‘iga telefon ulanadi, lekin saytlar ochilmaydi. Men texnik mutaxassis emasman. DNS, marshrutizator va internet provayderining vazifasini chalkashtirmasdan tushuntiring. Muammoni topish uchun xavfsiz beshta ketma-ket tekshiruv bering. Har bir tekshiruv natijasi nimani anglatishini ayting. Barcha sozlamalarni birdan o‘chirishni maslahat bermang."
+  },
+  {
+    "id": "uz-reasoning",
+    "prompt": "Mahallamiz kutubxonasi kechqurun ikki soat ko‘proq ishlashi kerakmi? Hozir kuniga 40 kishi keladi; qo‘shimcha vaqtda nechta odam kelishi noma’lum. Xodimlar charchashi, elektr xarajati va talabalar ehtiyojini hisobga olib, 450–550 so‘zli asoslangan tahlil yozing. Dalil bilan taxminni ajrating, mavjud bo‘lmagan raqamlarni o‘ylab topmang. Ikki haftalik sinov rejasini va qaror mezonlarini taklif qiling. Qarama-qarshi fikrni ham adolatli tushuntiring."
+  },
+  {
+    "id": "react-search",
+    "prompt": "React 18 / TypeScript strict debugging: implement a complete default-export Search component with input and results for GET /api/search?q=term returning {items: Array<{id:string,title:string}>}. Fix stale async results. Handle response.ok, loading, errors, empty term, unmount and React StrictMode setup-cleanup-setup. Abort alone is insufficient: guard even already-resolved promises. Use only React, no libraries. Return exactly one complete tsx fenced file; no placeholders. Include a short verification checklist after the code, do not claim execution."
+  },
+  {
+    "id": "react-reducer",
+    "prompt": "Implement one complete default-export React 18 TypeScript strict component TaskList using useReducer and discriminated action types. A Task has id:number, title:string, done:boolean. Allow add nonempty trimmed titles, toggle and delete by id. Use immutable updates, no any, stable IDs, accessible input label and buttons. Only React imports. Return exactly one self-contained tsx fenced file with complete syntax and no placeholders."
+  },
+  {
+    "id": "react-hook",
+    "prompt": "TypeScript strict + React 18: return exactly one complete tsx fenced module exporting useDebouncedValue<T>(value:T,delay:number):T and a default Demo component using it with a string input. Clear timers on updates and unmount, work under StrictMode, clamp negative delay to zero, include required React imports, no any, no dependencies beyond React. Ensure the entire module compiles; do not say you ran tests."
+  },
+  {
+    "id": "python-average",
+    "prompt": "Python debugging: def average(values): return sum(values)/(len(values)-1). Provide one complete python fenced module defining average(iterable) that accepts lists and one-shot generators, returns arithmetic mean and raises ValueError for empty input. Include at least 4 executable unittest tests in the same module plus unittest.main guard. Include empty generator and negative values. No third-party dependencies or claimed execution. Keep it concise."
+  },
+  {
+    "id": "python-fastapi",
+    "prompt": "Python/FastAPI debugging: create one complete python fenced module with app=FastAPI(), Pydantic Item input (name trimmed/nonempty, quantity int >0), POST /items returns name and quantity with status 201. Add GET /items/{item_id} for fixture documents {1:{owner:7,name:'owned'},2:{owner:8,name:'other'}}. For this isolated test only, use dependency current_user returning 7. Both missing and other-user documents must return identical 404. Include executable unittest + fastapi.testclient.TestClient tests for valid/invalid POST, owned GET and indistinguishable 404s. No database/network/filesystem operations; no claimed execution."
+  },
+  {
+    "id": "vision-shapes",
+    "files": [
+      "qa-84ad.png"
+    ],
+    "prompt": "Опиши только то, что непосредственно видно. Какие фигуры, цвета и взаимное расположение на этом изображении? Есть ли текст, дополнительные панели или обрезанные фрагменты? Если их нет, прямо скажи."
+  },
+  {
+    "id": "vision-text",
+    "files": [
+      "qa-c271.jpg"
+    ],
+    "prompt": "Укажи форму и цвет фигуры, а затем дословно перепиши весь видимый текст. Не добавляй символы, которых не видно."
+  },
+  {
+    "id": "vision-count",
+    "files": [
+      "qa-f619.png"
+    ],
+    "prompt": "Сколько отдельных цветных объектов видно? Укажи точное количество, их форму, цвет и расположение по рядам. Не считай белый фон объектом."
+  },
+  {
+    "id": "vision-no-text",
+    "files": [
+      "qa-3e02.jpg"
+    ],
+    "prompt": "Есть ли на изображении какие-либо буквы, цифры, подписи или логотипы? Если текста нет, прямо скажи это. Коротко перечисли только видимые объекты."
+  },
+  {
+    "id": "vision-absent",
+    "files": [
+      "qa-9b47.png"
+    ],
+    "prompt": "Какого цвета велосипед на изображении и кто на нём едет? Сначала проверь, существует ли такой объект на картинке. Не принимай предположение вопроса за факт."
+  }
+]

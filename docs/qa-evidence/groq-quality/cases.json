@@ -1,0 +1,158 @@
+[
+  {
+    "id": "uz-everyday",
+    "prompt": "Men ish kunlari soat 9 dan 18 gacha bandman. Uyga kelgach charchayman, lekin har kuni ovqat tayyorlash va yarim soat sayr qilishni xohlayman. Menga bajarish oson bo‘lgan kechki tartib taklif qiling. Nega aynan shu tartib foydali ekanini tushuntiring va qo‘shnimni shanba kungi sayrga uchta tabiiy jumla bilan taklif qiling. 180 so‘zdan oshmasin.",
+    "provider": "groq",
+    "httpStatus": 200,
+    "requestId": "981e98c3-d98c-4acb-8dcc-7a694dc88e20",
+    "transport": "COMPLETE",
+    "answer": "Kechki tartib:\n\n18:30 — 10 daqiqa dam oling, choy iching yoki derazani ochib nafas oling.\n19:00 — Oldindan tanlangan oddiy retsept bo'yicha ovqat tayyorlang.\n19:45 — Ovqat yashlang.\n20:15 — Yarim soat sayr.\n21:00 — Shaxsiy vaqt (kitob, serial, dam olish).\n\nNega foydali:\nKichik dam olish charchashni kamaytiradi, oldindan rejalashtirilgan ovqat \"nima yalayman?\" stressini olib tashlaydi, sayr esa uyqu sifati va umumiy kayfiyatni sezilarli yaxshilaydi.\n\nQo'shimga taklif:\n\"Shanba kuni ertalab sayrga chiqaylikmi?\"\n\"Havo yaxshi bo'lsa, bog'da yuramiz, keyin choyxonda o'tirib olamiz.\"\n\"Yo'lni birga tanlaymiz, qaysi tomonga qulaysa.\"",
+    "error": "",
+    "durationMs": 9144,
+    "paints": [
+      {
+        "ms": 5779,
+        "length": 2
+      },
+      {
+        "ms": 5851,
+        "length": 87
+      },
+      {
+        "ms": 5914,
+        "length": 161
+      },
+      {
+        "ms": 5977,
+        "length": 217
+      },
+      {
+        "ms": 6062,
+        "length": 286
+      },
+      {
+        "ms": 6134,
+        "length": 317
+      },
+      {
+        "ms": 6153,
+        "length": 334
+      },
+      {
+        "ms": 6174,
+        "length": 337
+      },
+      {
+        "ms": 6193,
+        "length": 340
+      },
+      {
+        "ms": 6213,
+        "length": 364
+      },
+      {
+        "ms": 6232,
+        "length": 392
+      },
+      {
+        "ms": 6246,
+        "length": 418
+      },
+      {
+        "ms": 6263,
+        "length": 451
+      },
+      {
+        "ms": 6283,
+        "length": 482
+      },
+      {
+        "ms": 6300,
+        "length": 503
+      },
+      {
+        "ms": 6316,
+        "length": 527
+      },
+      {
+        "ms": 6330,
+        "length": 555
+      },
+      {
+        "ms": 6347,
+        "length": 579
+      },
+      {
+        "ms": 6362,
+        "length": 616
+      },
+      {
+        "ms": 6375,
+        "length": 626
+      }
+    ],
+    "pageErrors": [],
+    "quality": "FAIL",
+    "reason": "Language failure: Ovqat yashlang, nima yalayman, Qo‘shimga, qaysi tomonga qulaysa are malformed/nonsensical in context."
+  },
+  {
+    "id": "uz-it",
+    "prompt": "Bizning kichik jamoamiz mijozlar ma’lumotlarini noutbuklarda saqlaydi. Zaxira nusxa olish bilan fayllarni sinxronlash orasidagi farqni oddiy misollar bilan tushuntiring. Tasodifan o‘chirilgan fayl sinxronlangan qurilmalardan ham yo‘qolsa, qanday tiklash mumkin? Uch bosqichli amaliy reja bering, noma’lum servis imkoniyatlarini o‘ylab topmang. 220 so‘z atrofida.",
+    "provider": "groq",
+    "httpStatus": 200,
+    "requestId": "09306689-1082-44af-b495-be56cfa55514",
+    "transport": "FAIL",
+    "answer": "",
+    "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+    "durationMs": 3935,
+    "paints": [],
+    "pageErrors": [],
+    "quality": "BLOCKED",
+    "reason": "Quota error; first observer launch failed, so upstream headers were not captured."
+  },
+  {
+    "id": "uz-everyday-retry",
+    "prompt": "Men ish kunlari soat 9 dan 18 gacha bandman. Uyga kelgach charchayman, lekin har kuni ovqat tayyorlash va yarim soat sayr qilishni xohlayman. Menga bajarish oson bo‘lgan kechki tartib taklif qiling. Nega aynan shu tartib foydali ekanini tushuntiring va qo‘shnimni shanba kungi sayrga uchta tabiiy jumla bilan taklif qiling. 180 so‘zdan oshmasin.",
+    "provider": "groq",
+    "httpStatus": 200,
+    "requestId": "c9c9511c-d5ac-47a9-a901-97c601c64c77",
+    "transport": "FAIL",
+    "answer": "",
+    "error": "The answer reached the provider limit before it finished. Please retry with a shorter request.\nRetry",
+    "durationMs": 13292,
+    "paints": [],
+    "pageErrors": [],
+    "quality": "BLOCKED",
+    "reason": "4096/4096 completion tokens were reasoning; no final answer, safe incomplete error."
+  },
+  {
+    "id": "uz-it-retry",
+    "prompt": "Bizning kichik jamoamiz mijozlar ma’lumotlarini noutbuklarda saqlaydi. Zaxira nusxa olish bilan fayllarni sinxronlash orasidagi farqni oddiy misollar bilan tushuntiring. Tasodifan o‘chirilgan fayl sinxronlangan qurilmalardan ham yo‘qolsa, qanday tiklash mumkin? Uch bosqichli amaliy reja bering, noma’lum servis imkoniyatlarini o‘ylab topmang. 220 so‘z atrofida.",
+    "provider": "groq",
+    "httpStatus": 200,
+    "requestId": "5f55e236-9121-4c38-8577-223c621cf879",
+    "transport": "FAIL",
+    "answer": "",
+    "error": "The answer reached the provider limit before it finished. Please retry with a shorter request.\nRetry",
+    "durationMs": 66913,
+    "paints": [],
+    "pageErrors": [],
+    "quality": "BLOCKED",
+    "reason": "4096/4096 completion tokens were reasoning; no final answer, safe incomplete error."
+  },
+  {
+    "id": "react-hook",
+    "prompt": "TypeScript strict + React 18: return exactly one complete tsx fenced module exporting useDebouncedValue<T>(value:T,delay:number):T and a default Demo component using it with a string input. Clear timers on updates and unmount, work under StrictMode, clamp negative delay to zero, include required React imports, no any, no dependencies beyond React. Ensure the entire module compiles; do not say you ran tests.",
+    "provider": "groq",
+    "httpStatus": 200,
+    "requestId": "11ccedc3-36a8-4cab-afd6-1733fe17f251",
+    "transport": "FAIL",
+    "answer": "",
+    "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+    "durationMs": 4681,
+    "paints": [],
+    "pageErrors": [],
+    "quality": "BLOCKED",
+    "reason": "HTTP 429 output quota, no generated code available to compile."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "integral",
+  "prompt": "Вычисли точно интеграл ∫₀¹ x·ln(1+x) dx. Покажи интегрирование по частям, разложение рациональной функции и подстановку пределов. Независимо проверь правдоподобие знака и величины. Используй математические формулы; не ищи в интернете.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "bb31cdb6-5f77-4a7f-9dfe-dca3be59ed9c",
+  "chatId": "3b05e1ae-ce75-4f8a-90ae-9e8372aa8d75",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=3b05e1ae-ce75-4f8a-90ae-9e8372aa8d75",
+  "durationMs": 7711,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

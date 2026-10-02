@@ -1,0 +1,927 @@
+[
+  {
+    "at": "2026-09-30T17:55:20.449599+00:00",
+    "phase": "request",
+    "request_id": "2f561427-238f-479f-8c1b-13b6182b8f10",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1024
+  },
+  {
+    "at": "2026-09-30T17:55:20.929550+00:00",
+    "phase": "response",
+    "request_id": "2f561427-238f-479f-8c1b-13b6182b8f10",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "999",
+      "x-ratelimit-remaining-tokens": "7443",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "1m26.4s",
+      "x-ratelimit-reset-tokens": "4.177s"
+    }
+  },
+  {
+    "at": "2026-09-30T17:55:20.984306+00:00",
+    "phase": "usage",
+    "request_id": "2f561427-238f-479f-8c1b-13b6182b8f10",
+    "usage": {
+      "queue_time": 0.206071837,
+      "prompt_tokens": 305,
+      "prompt_time": 0.018447687,
+      "completion_tokens": 19,
+      "completion_time": 0.039538257,
+      "total_tokens": 324,
+      "total_time": 0.057985944,
+      "completion_tokens_details": {
+        "reasoning_tokens": 9
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:55:20.986551+00:00",
+    "phase": "usage",
+    "request_id": "2f561427-238f-479f-8c1b-13b6182b8f10",
+    "usage": {
+      "queue_time": 0.206071837,
+      "prompt_tokens": 305,
+      "prompt_time": 0.018447687,
+      "completion_tokens": 19,
+      "completion_time": 0.039538257,
+      "total_tokens": 324,
+      "total_time": 0.057985944,
+      "completion_tokens_details": {
+        "reasoning_tokens": 9
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:56:27.649286+00:00",
+    "phase": "request",
+    "request_id": "1f838f92-2685-473d-a71a-e692b6f4475c",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1024
+  },
+  {
+    "at": "2026-09-30T17:56:28.176390+00:00",
+    "phase": "response",
+    "request_id": "1f838f92-2685-473d-a71a-e692b6f4475c",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "998",
+      "x-ratelimit-remaining-tokens": "7267",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "2m52.8s",
+      "x-ratelimit-reset-tokens": "5.497s"
+    }
+  },
+  {
+    "at": "2026-09-30T17:56:28.969847+00:00",
+    "phase": "usage",
+    "request_id": "1f838f92-2685-473d-a71a-e692b6f4475c",
+    "usage": {
+      "queue_time": 0.199632979,
+      "prompt_tokens": 488,
+      "prompt_time": 0.030029909,
+      "completion_tokens": 366,
+      "completion_time": 0.766434757,
+      "total_tokens": 854,
+      "total_time": 0.796464666,
+      "completion_tokens_details": {
+        "reasoning_tokens": 22
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:56:28.974675+00:00",
+    "phase": "usage",
+    "request_id": "1f838f92-2685-473d-a71a-e692b6f4475c",
+    "usage": {
+      "queue_time": 0.199632979,
+      "prompt_tokens": 488,
+      "prompt_time": 0.030029909,
+      "completion_tokens": 366,
+      "completion_time": 0.766434757,
+      "total_tokens": 854,
+      "total_time": 0.796464666,
+      "completion_tokens_details": {
+        "reasoning_tokens": 22
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:57:34.858278+00:00",
+    "phase": "request",
+    "request_id": "413305d8-d785-4261-a126-be819d50d341",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1024
+  },
+  {
+    "at": "2026-09-30T17:57:35.144466+00:00",
+    "phase": "response",
+    "request_id": "413305d8-d785-4261-a126-be819d50d341",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "997",
+      "x-ratelimit-remaining-tokens": "7385",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "4m19.2s",
+      "x-ratelimit-reset-tokens": "4.612s"
+    }
+  },
+  {
+    "at": "2026-09-30T17:57:36.698826+00:00",
+    "phase": "usage",
+    "request_id": "413305d8-d785-4261-a126-be819d50d341",
+    "usage": {
+      "queue_time": 0.048211927,
+      "prompt_tokens": 375,
+      "prompt_time": 0.016743237,
+      "completion_tokens": 740,
+      "completion_time": 1.542189736,
+      "total_tokens": 1115,
+      "total_time": 1.558932973,
+      "completion_tokens_details": {
+        "reasoning_tokens": 32
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:57:36.700919+00:00",
+    "phase": "usage",
+    "request_id": "413305d8-d785-4261-a126-be819d50d341",
+    "usage": {
+      "queue_time": 0.048211927,
+      "prompt_tokens": 375,
+      "prompt_time": 0.016743237,
+      "completion_tokens": 740,
+      "completion_time": 1.542189736,
+      "total_tokens": 1115,
+      "total_time": 1.558932973,
+      "completion_tokens_details": {
+        "reasoning_tokens": 32
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:58:41.718132+00:00",
+    "phase": "request",
+    "request_id": "b710639a-c544-4d84-95de-8a96a29727c4",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1024
+  },
+  {
+    "at": "2026-09-30T17:58:42.130866+00:00",
+    "phase": "response",
+    "request_id": "b710639a-c544-4d84-95de-8a96a29727c4",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "996",
+      "x-ratelimit-remaining-tokens": "7605",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "5m45.6s",
+      "x-ratelimit-reset-tokens": "2.962s"
+    }
+  },
+  {
+    "at": "2026-09-30T17:58:44.364686+00:00",
+    "phase": "usage",
+    "request_id": "b710639a-c544-4d84-95de-8a96a29727c4",
+    "usage": {
+      "queue_time": 0.196205342,
+      "prompt_tokens": 376,
+      "prompt_time": 0.015117765,
+      "completion_tokens": 1024,
+      "completion_time": 2.221588691,
+      "total_tokens": 1400,
+      "total_time": 2.236706456,
+      "completion_tokens_details": {
+        "reasoning_tokens": 401
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:58:44.366687+00:00",
+    "phase": "usage",
+    "request_id": "b710639a-c544-4d84-95de-8a96a29727c4",
+    "usage": {
+      "queue_time": 0.196205342,
+      "prompt_tokens": 376,
+      "prompt_time": 0.015117765,
+      "completion_tokens": 1024,
+      "completion_time": 2.221588691,
+      "total_tokens": 1400,
+      "total_time": 2.236706456,
+      "completion_tokens_details": {
+        "reasoning_tokens": 401
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:59:50.181910+00:00",
+    "phase": "request",
+    "request_id": "dce783b2-3662-4977-92cd-5f8f7fb4d02c",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1024
+  },
+  {
+    "at": "2026-09-30T17:59:50.441900+00:00",
+    "phase": "response",
+    "request_id": "dce783b2-3662-4977-92cd-5f8f7fb4d02c",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "995",
+      "x-ratelimit-remaining-tokens": "6461",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "7m12s",
+      "x-ratelimit-reset-tokens": "11.542s"
+    }
+  },
+  {
+    "at": "2026-09-30T17:59:51.514583+00:00",
+    "phase": "usage",
+    "request_id": "dce783b2-3662-4977-92cd-5f8f7fb4d02c",
+    "usage": {
+      "queue_time": 0.026904478,
+      "prompt_tokens": 799,
+      "prompt_time": 0.057401986,
+      "completion_tokens": 488,
+      "completion_time": 1.018560464,
+      "total_tokens": 1287,
+      "total_time": 1.07596245,
+      "completion_tokens_details": {
+        "reasoning_tokens": 105
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T17:59:51.516087+00:00",
+    "phase": "usage",
+    "request_id": "dce783b2-3662-4977-92cd-5f8f7fb4d02c",
+    "usage": {
+      "queue_time": 0.026904478,
+      "prompt_tokens": 799,
+      "prompt_time": 0.057401986,
+      "completion_tokens": 488,
+      "completion_time": 1.018560464,
+      "total_tokens": 1287,
+      "total_time": 1.07596245,
+      "completion_tokens_details": {
+        "reasoning_tokens": 105
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:01:20.900047+00:00",
+    "phase": "request",
+    "request_id": "2c65a6fa-fb3f-48d6-b44f-bb98d0d1b56c",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:01:21.193456+00:00",
+    "phase": "response",
+    "request_id": "2c65a6fa-fb3f-48d6-b44f-bb98d0d1b56c",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "995",
+      "x-ratelimit-remaining-tokens": "6600",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "7m12s",
+      "x-ratelimit-reset-tokens": "10.5s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:01:23.642150+00:00",
+    "phase": "usage",
+    "request_id": "2c65a6fa-fb3f-48d6-b44f-bb98d0d1b56c",
+    "usage": {
+      "queue_time": 0.017922846,
+      "prompt_tokens": 376,
+      "prompt_time": 0.022324182,
+      "completion_tokens": 1140,
+      "completion_time": 2.4295973,
+      "total_tokens": 1516,
+      "total_time": 2.451921482,
+      "completion_tokens_details": {
+        "reasoning_tokens": 415
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:01:23.644938+00:00",
+    "phase": "usage",
+    "request_id": "2c65a6fa-fb3f-48d6-b44f-bb98d0d1b56c",
+    "usage": {
+      "queue_time": 0.017922846,
+      "prompt_tokens": 376,
+      "prompt_time": 0.022324182,
+      "completion_tokens": 1140,
+      "completion_time": 2.4295973,
+      "total_tokens": 1516,
+      "total_time": 2.451921482,
+      "completion_tokens_details": {
+        "reasoning_tokens": 415
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:06:42.987211+00:00",
+    "phase": "request",
+    "request_id": "98bb6d9f-fa25-4cc9-8ad7-2281bafe7216",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "medium",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:06:43.251102+00:00",
+    "phase": "response",
+    "request_id": "98bb6d9f-fa25-4cc9-8ad7-2281bafe7216",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "997",
+      "x-ratelimit-remaining-tokens": "7351",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "4m19.2s",
+      "x-ratelimit-reset-tokens": "4.867s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:06:45.873855+00:00",
+    "phase": "usage",
+    "request_id": "98bb6d9f-fa25-4cc9-8ad7-2281bafe7216",
+    "usage": {
+      "queue_time": 0.018359035,
+      "prompt_tokens": 346,
+      "prompt_time": 0.017952156,
+      "completion_tokens": 1254,
+      "completion_time": 2.609288361,
+      "total_tokens": 1600,
+      "total_time": 2.627240517,
+      "completion_tokens_details": {
+        "reasoning_tokens": 755
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:06:45.877367+00:00",
+    "phase": "usage",
+    "request_id": "98bb6d9f-fa25-4cc9-8ad7-2281bafe7216",
+    "usage": {
+      "queue_time": 0.018359035,
+      "prompt_tokens": 346,
+      "prompt_time": 0.017952156,
+      "completion_tokens": 1254,
+      "completion_time": 2.609288361,
+      "total_tokens": 1600,
+      "total_time": 2.627240517,
+      "completion_tokens_details": {
+        "reasoning_tokens": 755
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:07:49.099410+00:00",
+    "phase": "request",
+    "request_id": "66f661b7-e3d8-43fb-bea7-05790ac8f8bc",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "medium",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:07:49.510241+00:00",
+    "phase": "response",
+    "request_id": "66f661b7-e3d8-43fb-bea7-05790ac8f8bc",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "996",
+      "x-ratelimit-remaining-tokens": "7273",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "5m45.6s",
+      "x-ratelimit-reset-tokens": "5.452s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:07:49.862478+00:00",
+    "phase": "usage",
+    "request_id": "66f661b7-e3d8-43fb-bea7-05790ac8f8bc",
+    "usage": {
+      "queue_time": 0.047797178,
+      "prompt_tokens": 444,
+      "prompt_time": 0.019542863,
+      "completion_tokens": 158,
+      "completion_time": 0.333838653,
+      "total_tokens": 602,
+      "total_time": 0.353381516,
+      "completion_tokens_details": {
+        "reasoning_tokens": 101
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:07:49.864996+00:00",
+    "phase": "usage",
+    "request_id": "66f661b7-e3d8-43fb-bea7-05790ac8f8bc",
+    "usage": {
+      "queue_time": 0.047797178,
+      "prompt_tokens": 444,
+      "prompt_time": 0.019542863,
+      "completion_tokens": 158,
+      "completion_time": 0.333838653,
+      "total_tokens": 602,
+      "total_time": 0.353381516,
+      "completion_tokens_details": {
+        "reasoning_tokens": 101
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:08:55.270656+00:00",
+    "phase": "request",
+    "request_id": "c7e1e149-91b5-4017-92d1-c80d638e67c4",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:08:55.821050+00:00",
+    "phase": "response",
+    "request_id": "c7e1e149-91b5-4017-92d1-c80d638e67c4",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "995",
+      "x-ratelimit-remaining-tokens": "6266",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "7m12s",
+      "x-ratelimit-reset-tokens": "13.004s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:08:56.011066+00:00",
+    "phase": "usage",
+    "request_id": "c7e1e149-91b5-4017-92d1-c80d638e67c4",
+    "usage": {
+      "queue_time": 0.296311949,
+      "prompt_tokens": 480,
+      "prompt_time": 0.024960016,
+      "completion_tokens": 80,
+      "completion_time": 0.166919501,
+      "total_tokens": 560,
+      "total_time": 0.191879517,
+      "completion_tokens_details": {
+        "reasoning_tokens": 47
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:08:56.013077+00:00",
+    "phase": "usage",
+    "request_id": "c7e1e149-91b5-4017-92d1-c80d638e67c4",
+    "usage": {
+      "queue_time": 0.296311949,
+      "prompt_tokens": 480,
+      "prompt_time": 0.024960016,
+      "completion_tokens": 80,
+      "completion_time": 0.166919501,
+      "total_tokens": 560,
+      "total_time": 0.191879517,
+      "completion_tokens_details": {
+        "reasoning_tokens": 47
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:10:01.612956+00:00",
+    "phase": "request",
+    "request_id": "03da042a-b410-43e3-973f-74f88bc86067",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:10:01.940061+00:00",
+    "phase": "response",
+    "request_id": "03da042a-b410-43e3-973f-74f88bc86067",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "994",
+      "x-ratelimit-remaining-tokens": "6307",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "8m38.4s",
+      "x-ratelimit-reset-tokens": "12.697s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:10:02.061203+00:00",
+    "phase": "usage",
+    "request_id": "03da042a-b410-43e3-973f-74f88bc86067",
+    "usage": {
+      "queue_time": 0.091755478,
+      "prompt_tokens": 439,
+      "prompt_time": 0.020088554,
+      "completion_tokens": 50,
+      "completion_time": 0.10512497,
+      "total_tokens": 489,
+      "total_time": 0.125213524,
+      "completion_tokens_details": {
+        "reasoning_tokens": 32
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:10:02.063203+00:00",
+    "phase": "usage",
+    "request_id": "03da042a-b410-43e3-973f-74f88bc86067",
+    "usage": {
+      "queue_time": 0.091755478,
+      "prompt_tokens": 439,
+      "prompt_time": 0.020088554,
+      "completion_tokens": 50,
+      "completion_time": 0.10512497,
+      "total_tokens": 489,
+      "total_time": 0.125213524,
+      "completion_tokens_details": {
+        "reasoning_tokens": 32
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:11:07.702769+00:00",
+    "phase": "request",
+    "request_id": "9aea0e6e-aaa2-4656-b0a3-e4561c24fb08",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:11:07.966276+00:00",
+    "phase": "response",
+    "request_id": "9aea0e6e-aaa2-4656-b0a3-e4561c24fb08",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "993",
+      "x-ratelimit-remaining-tokens": "7391",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "10m4.8s",
+      "x-ratelimit-reset-tokens": "4.567s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:11:08.293224+00:00",
+    "phase": "usage",
+    "request_id": "9aea0e6e-aaa2-4656-b0a3-e4561c24fb08",
+    "usage": {
+      "queue_time": 0.018138578,
+      "prompt_tokens": 451,
+      "prompt_time": 0.012893575,
+      "completion_tokens": 152,
+      "completion_time": 0.31622567,
+      "total_tokens": 603,
+      "total_time": 0.329119245,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 83
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:11:08.295484+00:00",
+    "phase": "usage",
+    "request_id": "9aea0e6e-aaa2-4656-b0a3-e4561c24fb08",
+    "usage": {
+      "queue_time": 0.018138578,
+      "prompt_tokens": 451,
+      "prompt_time": 0.012893575,
+      "completion_tokens": 152,
+      "completion_time": 0.31622567,
+      "total_tokens": 603,
+      "total_time": 0.329119245,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 83
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:12:13.669890+00:00",
+    "phase": "request",
+    "request_id": "df56a5d4-c15c-49f4-9149-7a162367bd70",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:12:13.936828+00:00",
+    "phase": "response",
+    "request_id": "df56a5d4-c15c-49f4-9149-7a162367bd70",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "992",
+      "x-ratelimit-remaining-tokens": "6295",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "11m31.2s",
+      "x-ratelimit-reset-tokens": "12.787s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:12:14.381837+00:00",
+    "phase": "usage",
+    "request_id": "df56a5d4-c15c-49f4-9149-7a162367bd70",
+    "usage": {
+      "queue_time": 0.055108378,
+      "prompt_tokens": 451,
+      "prompt_time": 0.162208516,
+      "completion_tokens": 132,
+      "completion_time": 0.285363872,
+      "total_tokens": 583,
+      "total_time": 0.447572388,
+      "completion_tokens_details": {
+        "reasoning_tokens": 66
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:12:14.384153+00:00",
+    "phase": "usage",
+    "request_id": "df56a5d4-c15c-49f4-9149-7a162367bd70",
+    "usage": {
+      "queue_time": 0.055108378,
+      "prompt_tokens": 451,
+      "prompt_time": 0.162208516,
+      "completion_tokens": 132,
+      "completion_time": 0.285363872,
+      "total_tokens": 583,
+      "total_time": 0.447572388,
+      "completion_tokens_details": {
+        "reasoning_tokens": 66
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:13:24.117798+00:00",
+    "phase": "request",
+    "request_id": "bcbc8686-855d-4c2d-ab9d-935be79c019b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:13:24.390430+00:00",
+    "phase": "response",
+    "request_id": "bcbc8686-855d-4c2d-ab9d-935be79c019b",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "991",
+      "x-ratelimit-remaining-tokens": "6317",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "12m57.599s",
+      "x-ratelimit-reset-tokens": "12.622s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:13:24.636360+00:00",
+    "phase": "usage",
+    "request_id": "bcbc8686-855d-4c2d-ab9d-935be79c019b",
+    "usage": {
+      "queue_time": 0.049190587,
+      "prompt_tokens": 429,
+      "prompt_time": 0.018564307,
+      "completion_tokens": 112,
+      "completion_time": 0.2315718,
+      "total_tokens": 541,
+      "total_time": 0.250136107,
+      "completion_tokens_details": {
+        "reasoning_tokens": 92
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:13:24.639361+00:00",
+    "phase": "usage",
+    "request_id": "bcbc8686-855d-4c2d-ab9d-935be79c019b",
+    "usage": {
+      "queue_time": 0.049190587,
+      "prompt_tokens": 429,
+      "prompt_time": 0.018564307,
+      "completion_tokens": 112,
+      "completion_time": 0.2315718,
+      "total_tokens": 541,
+      "total_time": 0.250136107,
+      "completion_tokens_details": {
+        "reasoning_tokens": 92
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:30.655561+00:00",
+    "phase": "request",
+    "request_id": "bbdaa708-c6d4-4833-ad2a-aa16accbe344",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:14:31.077722+00:00",
+    "phase": "response",
+    "request_id": "bbdaa708-c6d4-4833-ad2a-aa16accbe344",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "990",
+      "x-ratelimit-remaining-tokens": "7404",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "14m24s",
+      "x-ratelimit-reset-tokens": "4.47s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:31.136420+00:00",
+    "phase": "request",
+    "request_id": "03a0b715-084b-4f2a-996f-fe2bb337af60",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "groq_credential_used": true,
+    "model": "openai/gpt-oss-120b",
+    "reasoning_effort": "low",
+    "stream": true,
+    "max_completion_tokens": 1536
+  },
+  {
+    "at": "2026-09-30T18:14:31.256204+00:00",
+    "phase": "usage",
+    "request_id": "bbdaa708-c6d4-4833-ad2a-aa16accbe344",
+    "usage": {
+      "queue_time": 0.205154878,
+      "prompt_tokens": 438,
+      "prompt_time": 0.021052443,
+      "completion_tokens": 69,
+      "completion_time": 0.147340973,
+      "total_tokens": 507,
+      "total_time": 0.168393416,
+      "completion_tokens_details": {
+        "reasoning_tokens": 48
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:31.259217+00:00",
+    "phase": "usage",
+    "request_id": "bbdaa708-c6d4-4833-ad2a-aa16accbe344",
+    "usage": {
+      "queue_time": 0.205154878,
+      "prompt_tokens": 438,
+      "prompt_time": 0.021052443,
+      "completion_tokens": 69,
+      "completion_time": 0.147340973,
+      "total_tokens": 507,
+      "total_time": 0.168393416,
+      "completion_tokens_details": {
+        "reasoning_tokens": 48
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:31.472839+00:00",
+    "phase": "response",
+    "request_id": "03a0b715-084b-4f2a-996f-fe2bb337af60",
+    "model": "openai/gpt-oss-120b",
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "989",
+      "x-ratelimit-remaining-tokens": "6966",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "15m50.4s",
+      "x-ratelimit-reset-tokens": "7.755s"
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:31.654236+00:00",
+    "phase": "usage",
+    "request_id": "03a0b715-084b-4f2a-996f-fe2bb337af60",
+    "usage": {
+      "queue_time": 0.089248649,
+      "prompt_tokens": 436,
+      "prompt_time": 0.019989925,
+      "completion_tokens": 76,
+      "completion_time": 0.165335583,
+      "total_tokens": 512,
+      "total_time": 0.185325508,
+      "completion_tokens_details": {
+        "reasoning_tokens": 56
+      }
+    }
+  },
+  {
+    "at": "2026-09-30T18:14:31.657069+00:00",
+    "phase": "usage",
+    "request_id": "03a0b715-084b-4f2a-996f-fe2bb337af60",
+    "usage": {
+      "queue_time": 0.089248649,
+      "prompt_tokens": 436,
+      "prompt_time": 0.019989925,
+      "completion_tokens": 76,
+      "completion_time": 0.165335583,
+      "total_tokens": 512,
+      "total_time": 0.185325508,
+      "completion_tokens_details": {
+        "reasoning_tokens": 56
+      }
+    }
+  },
+  {
+    "at": "2026-10-02T08:17:43.058911+00:00",
+    "phase": "request",
+    "request_id": "5fb4b316-588d-427a-a03d-ce97a30f6a6b",
+    "endpoint": "https://api.groq.com/openai/v1/audio/transcriptions",
+    "groq_credential_used": true
+  },
+  {
+    "at": "2026-10-02T08:17:43.711048+00:00",
+    "phase": "response",
+    "request_id": "5fb4b316-588d-427a-a03d-ce97a30f6a6b",
+    "model": null,
+    "status": 200,
+    "rate_limits": {
+      "x-ratelimit-remaining-requests": "1999",
+      "x-ratelimit-limit-requests": "2000",
+      "x-ratelimit-reset-requests": "43.2s"
+    }
+  }
+]

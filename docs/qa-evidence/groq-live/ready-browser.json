@@ -1,0 +1,31 @@
+{
+  "id": "ready-browser",
+  "prompt": "Ответь одним словом: READY",
+  "provider": "groq",
+  "quality": "PASS",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "81767805-e3ce-435c-84b1-63a83b3d665d",
+  "chatId": "f298a947-a60a-43d4-9116-8341e499c85d",
+  "answer": "READY",
+  "error": "",
+  "sseEvents": [
+    "meta",
+    "delta",
+    "done"
+  ],
+  "transport": "COMPLETE",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [
+    {
+      "ms": 1916,
+      "length": 5
+    }
+  ],
+  "chatUrl": "http://localhost:3002/?chat=f298a947-a60a-43d4-9116-8341e499c85d",
+  "durationMs": 6092,
+  "review": "Exact READY in headed browser; actual Groq HTTP 200 and persisted accounting."
+}

@@ -1,0 +1,14 @@
+{
+  "ready": 200,
+  "provider": "groq",
+  "text_live": true,
+  "vision": false,
+  "voice": true,
+  "default_model": "openai/gpt-oss-120b",
+  "specialist_model": "qwen/qwen3.8-27b",
+  "transcription_model": "whisper-large-v3-turbo",
+  "coding_output_tokens": 4096,
+  "qa_subscription_restored": true,
+  "normal_entrypoint_restored": true,
+  "provider_requests": 0
+}

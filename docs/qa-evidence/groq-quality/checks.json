@@ -1,0 +1,34 @@
+{
+  "backend": {
+    "unique_passed": 58,
+    "batches": [
+      {
+        "passed": 55,
+        "command": "pytest tests/test_groq_quality.py tests/test_gemini_provider.py -q"
+      },
+      {
+        "passed": 2,
+        "command": "pytest tests/test_groq_quality.py -k 'disabled_vision or invalid_evidence' -q"
+      },
+      {
+        "passed": 1,
+        "command": "pytest tests/test_groq_quality.py -k disabled_vision_public_api -q"
+      }
+    ],
+    "full_suite_run": false,
+    "new_groq_tests": 29
+  },
+  "typescript": {
+    "web": "PASS",
+    "mobile": "PASS"
+  },
+  "compileall": "PASS",
+  "pip_check": "No broken requirements found",
+  "browser": {
+    "targeted_passed": 1,
+    "full_e2e_run": false
+  },
+  "production_build": "NOT_RUN",
+  "expo_checks": "NOT_RUN",
+  "live_gate": "FAIL / BLOCKED"
+}

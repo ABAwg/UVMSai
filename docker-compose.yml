@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: uvms_ai
+      POSTGRES_USER: uvms
+      POSTGRES_PASSWORD: uvms
+    volumes: [uvms_postgres:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uvms -d uvms_ai"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    ports: ["5432:5432"]
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    volumes: [uvms_redis:/data]
+    ports: ["6379:6379"]
+
+  api:
+    build: { context: ./services/api }
+    env_file: [.env]
+    environment:
+      UVMS_DATABASE_URL: postgresql+psycopg://uvms:uvms@postgres:5432/uvms_ai
+      UVMS_REDIS_URL: redis://redis:6379/0
+      UVMS_STORAGE_DIR: /data/uploads
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_started }
+    ports: ["8000:8000"]
+    volumes:
+      - ./services/api:/app
+      - uvms_uploads:/data/uploads
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+
+volumes:
+  uvms_postgres:
+  uvms_redis:
+  uvms_uploads:

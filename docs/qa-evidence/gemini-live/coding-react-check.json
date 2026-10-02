@@ -1,0 +1,12 @@
+{
+  "quality": "PASS",
+  "checks": [
+    "pending indicator",
+    "stale already-resolved fetch cannot overwrite newer results",
+    "unmount guard",
+    "empty input",
+    "HTTP error and pending cleanup"
+  ],
+  "syntaxDiagnostics": 0,
+  "source": "actual Gemini React response; isolated behavioral checks, no real network"
+}

@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-30",
+  "version": "1.4.2",
+  "version_bumped": false,
+  "production_ready": false,
+  "provider": "groq",
+  "default_model": "openai/gpt-oss-120b",
+  "specialist_model": "qwen/qwen3.8-27b",
+  "live_acceptance": "FAIL / BLOCKED by Qwen output quota",
+  "UZ": "FAIL; remaining cases blocked",
+  "Python": "BLOCKED, 0/2 executed",
+  "React_TS_compile": "BLOCKED, 0/3 compiled",
+  "Vision": "DISABLED FOR LAUNCH",
+  "GPT_OSS_smoke": "NOT_RUN this round (quality gate closed); historical core smoke PASS",
+  "Qwen_smoke": "FAIL / BLOCKED",
+  "new_provider_attempts": 5,
+  "provider_http_200": 3,
+  "rate_limit_errors": 2,
+  "captured_upstream_429": 1,
+  "first_429_headers_missing": true,
+  "provider_5xx": 0,
+  "coding_effort_live_requested": "high",
+  "coding_sampling_live_requested": 0.6,
+  "final_uz_sampling_live_validated": false,
+  "backend_targeted_tests": 58,
+  "new_backend_tests": 29,
+  "full_backend_regression": "NOT_RUN",
+  "web_unit_tests_this_round": 0,
+  "browser_targeted_checks": 1,
+  "browser_full_e2e_this_round": 0,
+  "typescript": {
+    "web": "PASS",
+    "mobile": "PASS"
+  },
+  "python_compile": "PASS",
+  "pip_check": "PASS",
+  "historical_full_counts_not_current_certification": {
+    "backend": 155,
+    "web_unit": 16,
+    "browser_e2e": 25,
+    "mobile_sse": 2,
+    "expo_doctor": 21
+  },
+  "last_rate_limits": {
+    "at": "2026-09-30T12:56:42.980487+00:00",
+    "model": "qwen/qwen3.8-27b",
+    "remaining_requests": 999,
+    "request_limit": 1000,
+    "remaining_tokens": 8000,
+    "token_limit": 8000,
+    "output_tokens_per_minute_limit": 1000,
+    "provider_expected_output_tokens": 4096,
+    "requested_max_completion_tokens": 8192,
+    "retry_after": null
+  },
+  "unrun_gates": [
+    "remaining live acceptance",
+    "GPT-OSS smoke",
+    "full backend",
+    "Web unit",
+    "full browser E2E",
+    "Web production build",
+    "Expo checks/exports",
+    "dedicated Alembic drift check"
+  ],
+  "external_requirement": "Sufficient output-token quota on the existing Groq account for required Qwen high-reasoning acceptance. Key/provider/model already configured.",
+  "secret_scan": {
+    "status": "PASS",
+    "source_files": 296,
+    "current_web_runtime_files": 73,
+    "matches": 0,
+    "exact_private_keys_and_qa_credentials_checked": true,
+    "encodings": [
+      "UTF-8",
+      "UTF-16LE"
+    ],
+    "scope": "Current source and current development Web public assets. Production/mobile bundles not rebuilt."
+  },
+  "release_verifier": "PASS working-tree and clean archive source",
+  "archive_kind": "candidate source snapshot, not public release",
+  "archive": "UVMS-AI-v1.4.2-groq-quality-candidate.zip",
+  "private_paths_in_archive": 0
+}

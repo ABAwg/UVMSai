@@ -1,0 +1,21 @@
+{
+  "phase": "live-stop-retry",
+  "steps": [
+    {
+      "name": "mid-stream Stop persists partial answer",
+      "status": "PASS",
+      "beforeLength": 75,
+      "afterLength": 142,
+      "restoredLength": 142,
+      "persisted": true,
+      "stoppedBadge": 0
+    },
+    {
+      "name": "regenerate after Stop",
+      "status": "PASS",
+      "http": 200,
+      "assistantCount": 1,
+      "answerLength": 5115
+    }
+  ]
+}

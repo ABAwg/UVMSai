@@ -1,0 +1,22 @@
+{
+  "id": "flow-two-tabs",
+  "provider": "groq",
+  "quality": "PASS",
+  "a": {
+    "requestId": "80dd7e56-3a36-4a58-91d4-56afe5952e96",
+    "chatId": "98ef87ba-7eb1-43d0-b589-1ba5363209ee",
+    "answer": "ALFA=703",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=98ef87ba-7eb1-43d0-b589-1ba5363209ee"
+  },
+  "b": {
+    "requestId": "1c91c090-13d4-4fe3-a7ac-5f607b2cb079",
+    "chatId": "91d5359f-4403-47fb-a7c8-32a19af79fe5",
+    "answer": "BETA=320",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=91d5359f-4403-47fb-a7c8-32a19af79fe5"
+  },
+  "savedA": "ALFA=703",
+  "savedB": "BETA=320",
+  "review": "Concurrent actual Groq replies ALFA=703 and BETA=320 in distinct chats; both reload histories match."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "vision",
+  "prompt": "Describe each attached image separately, citing its filename. Identify all shapes, their colors, their relative positions and the exact printed text. Compare the two images. Use only the image pixels; say if any text is unreadable.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "f50f2957-5825-4f3f-a095-38e46ba76950",
+  "chatId": "8c57ab93-0bda-4c69-b65f-b6534b884c24",
+  "answer": "",
+  "error": "The AI connection was interrupted. Please retry.\nRetry",
+  "sseEvents": [
+    "meta",
+    "delta",
+    "delta",
+    "delta",
+    "delta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [
+    {
+      "ms": 9392,
+      "length": 61
+    },
+    {
+      "ms": 9449,
+      "length": 147
+    },
+    {
+      "ms": 9509,
+      "length": 264
+    },
+    {
+      "ms": 9660,
+      "length": 364
+    }
+  ],
+  "chatUrl": "http://localhost:3002/?chat=8c57ab93-0bda-4c69-b65f-b6534b884c24",
+  "durationMs": 11944,
+  "upstream_http_status": 200,
+  "review": "No complete usable Gemini response. Stream ended without the required terminal contract."
+}

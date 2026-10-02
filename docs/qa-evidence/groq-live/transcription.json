@@ -1,0 +1,14 @@
+{
+  "provider": "groq",
+  "model": "whisper-large-v3-turbo",
+  "request_id": "2f4fa8e6-6d8f-4134-964a-56df900d593b",
+  "text": "The access code is 742. Testing speech transcription.",
+  "demo": false,
+  "quality": "PASS",
+  "usage": [
+    {
+      "seconds": 5.243687424
+    }
+  ],
+  "review": "Actual whisper-large-v3-turbo returned the fixture sentence and code742; duration5.243687424s. No demo transcription."
+}

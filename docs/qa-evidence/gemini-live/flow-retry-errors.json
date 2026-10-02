@@ -1,0 +1,33 @@
+{
+  "id": "flow-retry-errors",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "errors": [
+    {
+      "code": "rate_limit",
+      "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    },
+    {
+      "code": "timeout",
+      "error": "The response took too long. Try again.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    },
+    {
+      "code": "upstream_error",
+      "error": "The AI service returned an error. Please try again.\nRetry",
+      "retryVisible": true,
+      "source": "controlled browser SSE fixture"
+    }
+  ],
+  "recovered": {
+    "requestId": "3a33a454-5a72-4491-bbfe-211e2951e638",
+    "chatId": "ee16b330-5db2-469c-9395-371fca61e936",
+    "answer": "",
+    "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+    "chatUrl": "http://localhost:3002/?chat=ee16b330-5db2-469c-9395-371fca61e936"
+  },
+  "userMessages": 1
+}

@@ -1,0 +1,150 @@
+{
+  "provider": "groq",
+  "text_model": "openai/gpt-oss-120b",
+  "vision_model": "qwen/qwen3.8-27b",
+  "transcription_model": "whisper-large-v3-turbo",
+  "requests": 22,
+  "observed_http": {
+    "200": 22
+  },
+  "persisted_accounting_rows": 20,
+  "accounting_statuses": {
+    "completed": 19,
+    "cancelled": 1
+  },
+  "accounting_models": {
+    "openai/gpt-oss-120b": 19,
+    "qwen/qwen3.8-27b": 1
+  },
+  "last_rate_limits": {
+    "openai/gpt-oss-120b": {
+      "at": "2026-09-30T11:37:01.526921+00:00",
+      "status": 200,
+      "x-ratelimit-remaining-requests": "991",
+      "x-ratelimit-remaining-tokens": "7518",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "12m57.599s",
+      "x-ratelimit-reset-tokens": "3.615s"
+    },
+    "qwen/qwen3.8-27b": {
+      "at": "2026-09-30T07:19:50.151818+00:00",
+      "status": 200,
+      "x-ratelimit-remaining-requests": "999",
+      "x-ratelimit-remaining-tokens": "3036",
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-reset-requests": "1m26.4s",
+      "x-ratelimit-reset-tokens": "37.23s"
+    },
+    "whisper-large-v3-turbo": {
+      "at": "2026-09-30T11:37:15.952585+00:00",
+      "status": 200,
+      "x-ratelimit-remaining-requests": "1999",
+      "x-ratelimit-limit-requests": "2000",
+      "x-ratelimit-reset-requests": "43.2s"
+    }
+  },
+  "quality_reviews": {
+    "ready-browser": {
+      "quality": "PASS",
+      "review": "Exact READY in headed browser; actual Groq HTTP 200 and persisted accounting."
+    },
+    "ru": {
+      "quality": "FAIL",
+      "review": "Additional planning test: listed Python blocks total 8.5h, not claimed 6h; English 4h, not 3h; 128/7 is not 21h20m. Weekend wake-up also violates 07:00 constraint."
+    },
+    "ru-technical": {
+      "quality": "PASS",
+      "review": "Natural Russian explanation distinguishes blocking sleep, awaited async sleep, thread for sync I/O and process pool for CPU. Example is illustrative; HTTP timeout/pool lifecycle hardening not supplied."
+    },
+    "uz": {
+      "quality": "FAIL",
+      "review": "Electrical calculations are correct (9 ohm, 2 A, 12/6 V, 24/12 W; parallel 2 ohm, 9 A). Quality fails: energiya (quvvat) conflates energy and power; Q value heading and awkward invitations/word forms fail natural technical Uzbek."
+    },
+    "coding-python": {
+      "quality": "PASS",
+      "review": "Returned average implementation and 4 unittest tests executed successfully; 3 independent edge checks passed. Ownership condition handles missing and foreign rows with identical 404; application schema/dependency imports are placeholders."
+    },
+    "coding-react": {
+      "quality": "FAIL",
+      "review": "Unmodified returned TSX fails transpilation: '}' expected. It also fails to invalidate prior request on empty term and never resets mounted.current after StrictMode effect cleanup."
+    },
+    "integral": {
+      "quality": "PASS",
+      "review": "Correct integration by parts, x²/(1+x)=x-1+1/(1+x), final 1/4. Independent Simpson integration: 0.2499999999999996."
+    },
+    "bayes": {
+      "quality": "PASS",
+      "review": "Correct formula and 95/590 = 19/118 = 16.101694915254235%; expected counts 100 defective, 95 TP, 495 FP, 590 positives. One LaTeX block is malformed by the model: unescaped percent comments out a closing brace, so safe raw fallback is shown."
+    },
+    "physics": {
+      "quality": "PASS",
+      "review": "Independent results: a=3.2058581578 m/s², v=5.6620298107 m/s, friction work=-16.9914184223 J, stop=6.5358983849 m. Returned rounded results and work-energy cross-check agree."
+    },
+    "vision": {
+      "quality": "FAIL",
+      "review": "Correct red triangle, blue circle and DELTA 42, but invented a repeated lower panel and cropped fragments absent from both source images. Opaque filenames supplied. Actual upstream model qwen/qwen3.8-27b."
+    },
+    "files-documents": {
+      "quality": "PASS",
+      "review": "TXT/DOCX:17 minutes/Mira/amber; PDF:73%; XLSX and CSV both 120,150,-20,310,total560; checked against original files."
+    },
+    "charts": {
+      "quality": "PASS",
+      "review": "Four actual chart cards: line/bar/pie/scatter; values preserve negative line/bar and exact scatter coordinates; explanation excludes negative pie shares."
+    },
+    "flow-memory": {
+      "quality": "PASS",
+      "review": "Manually reviewed whitespace-normalized answer Copper Cedar 826; narrow NBSP caused initial exact-string harness FAIL. Disabled memory returned UNKNOWN. No rerun used to change model answer."
+    },
+    "flow-project-resume": {
+      "quality": "PASS",
+      "review": "Project instruction prefix GROQ-CHECK-527 and file facts 17/Mira/amber with notes.txt citation; reload retained project. Initial harness set disabled input before create busy finished; no first upstream request."
+    },
+    "flow-stop-regenerate": {
+      "quality": "PASS",
+      "review": "Stop returned in 1305ms after visible content; persisted partial 1390 characters; regenerated full answer and reload retained it. This is a flow PASS, not a claim every tutorial recommendation is correct."
+    },
+    "flow-retry-errors": {
+      "quality": "PASS",
+      "review": "Three explicitly synthetic safe-error UI fixtures; final real Retry returned RETRY-OK with one user message. No actual Groq 429 observed."
+    },
+    "flow-two-tabs": {
+      "quality": "PASS",
+      "review": "Concurrent actual Groq replies ALFA=703 and BETA=320 in distinct chats; both reload histories match."
+    },
+    "transcription": {
+      "quality": "PASS",
+      "review": "Actual whisper-large-v3-turbo returned the fixture sentence and code742; duration5.243687424s. No demo transcription."
+    }
+  },
+  "live_acceptance": "FAIL",
+  "production_ready": false,
+  "release_version": "1.4.2",
+  "version_bumped": false,
+  "new_regression_executed": false,
+  "new_final_zip": null,
+  "date": "2026-09-30",
+  "backend_full_baseline": 155,
+  "web_unit_baseline": 16,
+  "browser_e2e_baseline": 25,
+  "mobile_sse_baseline": 2,
+  "expo_doctor_baseline": "21/21",
+  "gemini_affected_suite_before_groq": 29,
+  "generated_python_tests": 4,
+  "additional_python_checks": 3,
+  "generated_react_compilation": "FAIL TS1005",
+  "regression_gate": "NOT RUN: strict live quality gate failed",
+  "release_verifier": "NOT RUN for Groq: release gate not opened",
+  "secret_scan": {
+    "status": "PASS",
+    "source_files": 277,
+    "current_web_runtime_files": 73,
+    "secret_matches": 0,
+    "exact_groq_key_checked": true,
+    "scope": "Source and current development Web public assets; no new production/mobile build or archive created."
+  },
+  "zip_name": null,
+  "sha256": null
+}

@@ -1,0 +1,36 @@
+{
+  "synthetic_config_no_provider_credentials": "PASS",
+  "/": 200,
+  "/live": 200,
+  "/ready": 200,
+  "metrics_unauthorized": 401,
+  "metrics_authorized": 200,
+  "redis": "PASS",
+  "migration_head": "e2c7c0d4a4b1 (head)",
+  "migration_drift": "none",
+  "sse_headers": {
+    "content-type": "text/event-stream; charset=utf-8",
+    "cache-control": "no-cache, no-transform",
+    "content-encoding": null,
+    "x-accel-buffering": "no"
+  },
+  "demo_edge_sse": {
+    "deltas": 50,
+    "first_ms": 67.4,
+    "duration_ms": 366.8,
+    "done": true
+  },
+  "load_100": {
+    "ok": 100,
+    "p95_ms": 20.03,
+    "max_ms": 29.9
+  },
+  "disposable_backup_restore": "PASS",
+  "graceful_stop_seconds": 1.09,
+  "outage_ready": {
+    "status": 504,
+    "seconds": 2.01
+  },
+  "recovery_ready": 200,
+  "api_workers": "default entrypoint"
+}

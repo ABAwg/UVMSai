@@ -1,0 +1,21 @@
+{
+  "id": "flow-memory",
+  "provider": "groq",
+  "quality": "PASS",
+  "enabled": {
+    "requestId": "9d5d1ab5-500a-4db6-aee5-48c067f6af46",
+    "chatId": "62e8a769-9121-485a-91b3-b35551b0df8d",
+    "answer": "Your current live‑QA project codename is Copper Cedar 826.",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=62e8a769-9121-485a-91b3-b35551b0df8d"
+  },
+  "disabled": {
+    "requestId": "a13386f4-570e-4abf-b3fa-db2fab504a29",
+    "chatId": "c1ee999a-88fe-4a49-9ba9-d9033ebd3831",
+    "answer": "UNKNOWN",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=c1ee999a-88fe-4a49-9ba9-d9033ebd3831"
+  },
+  "initial_harness_quality": "FAIL",
+  "review": "Manually reviewed whitespace-normalized answer Copper Cedar 826; narrow NBSP caused initial exact-string harness FAIL. Disabled memory returned UNKNOWN. No rerun used to change model answer."
+}

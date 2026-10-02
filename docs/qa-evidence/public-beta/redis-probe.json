@@ -1,0 +1,1 @@
+{"redis_cross_process_admission": "PASS", "admitted": 3, "busy": 5, "minute_limit": "PASS", "daily_limit": "PASS", "leases_released": true, "provider_calls": 0}

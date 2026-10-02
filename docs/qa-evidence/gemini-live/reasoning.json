@@ -1,0 +1,26 @@
+{
+  "id": "reasoning",
+  "prompt": "Three colleagues can meet for 30 minutes. A is available 09:00–10:00, B 09:30–10:30, C 10:00–11:00. Does a common 30-minute slot exist? Show the interval intersection. If exactly one colleague may extend either endpoint by at most 30 minutes, give every minimal change that creates a slot, and prove that any smaller extension cannot work.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "b82832db-7852-4543-92e0-01a7b12382e6",
+  "chatId": "55ebc6e5-0c8d-4f15-a9df-d0bb8e937909",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=55ebc6e5-0c8d-4f15-a9df-d0bb8e937909",
+  "durationMs": 8505,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

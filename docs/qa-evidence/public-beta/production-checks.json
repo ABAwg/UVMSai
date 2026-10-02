@@ -1,0 +1,46 @@
+{
+  "nginx": "PASS",
+  "nonroot_uid": "10001",
+  "alembic": "PASS",
+  "postgres_tables": 20,
+  "redis": "PONG",
+  "/live": {
+    "status": "ok",
+    "service": "uvms-ai-api",
+    "version": "1.4.3"
+  },
+  "/ready": {
+    "status": "ready",
+    "checks": {
+      "database": {
+        "ok": true
+      },
+      "storage": {
+        "ok": true,
+        "detail": "local"
+      },
+      "redis": {
+        "ok": true
+      },
+      "ai_provider": {
+        "ok": true,
+        "detail": "configured"
+      }
+    }
+  },
+  "public_metrics_hidden": "PASS",
+  "env_hidden": "PASS",
+  "cors_rejected": "PASS",
+  "http_redirect": 301,
+  "secure_cookie_rotation": "PASS",
+  "capabilities": {
+    "provider": "groq",
+    "text_live": true,
+    "vision": false,
+    "images": false,
+    "search": false,
+    "voice": true
+  },
+  "registration_upload": "PASS",
+  "internal_metrics_auth": "PASS"
+}

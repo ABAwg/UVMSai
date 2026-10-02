@@ -1,0 +1,11 @@
+{
+  "providerRequests": 0,
+  "provider": "gemini",
+  "textLive": true,
+  "reloadHistory": "PASS",
+  "projectFilePersistence": "PASS",
+  "projectHarnessCorrection": "Projects reload opens the list; reselect project before checking its file.",
+  "diagnostic": "Gemini: unavailable\n\nModels: fast: gemini-3.8-flash · balanced: gemini-3.8-flash · deep: gemini-3.8-flash\n\nLast request: 9/30/2026, 11:18:55 AM Availability reflects the latest provider request within 15 minutes.\n\nLast error: The AI quota is temporarily exhausted. Please try again later. (rate_limit) · 9/30/2026, 11:18:55 AM\n\nCheck provider",
+  "secretFieldRendered": false,
+  "quality": "PASS"
+}

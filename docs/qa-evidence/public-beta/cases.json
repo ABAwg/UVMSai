@@ -1,0 +1,203 @@
+[
+  {
+    "id": "ready-browser",
+    "quality": "PASS",
+    "review": "Exact READY; actual Groq endpoint and own credential observed.",
+    "http": 200,
+    "request_id": "2f561427-238f-479f-8c1b-13b6182b8f10",
+    "prompt": "Ответь одним словом: READY",
+    "answer": "READY",
+    "paints": 1,
+    "charts": 0,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "ru-coding",
+    "quality": "PASS",
+    "review": "Natural Russian explanation; reviewed Python function and five assertions executed successfully.",
+    "http": 200,
+    "request_id": "1f838f92-2685-473d-a71a-e692b6f4475c",
+    "prompt": "Объясни по-русски ошибку Python: def average(xs): return sum(xs)/(len(xs)-1). Дай короткую исправленную функцию average, которая принимает одноразовый генератор и выбрасывает ValueError для пустого ввода. Добавь три assert-проверки, включая отрицательные числа, и краткое объяснение. Не утверждай, что запускал код. До 180 слов.",
+    "answer": "**Ошибка**  \nВ функции `average(xs): return sum(xs)/(len(xs)-1)` деление происходит на `len(xs)-1`. Если передан список из одного элемента, делитель становится 0 → `ZeroDivisionError`. Кроме того, функция принимает только последовательности, а не «одноразовый генератор», у которого нет `len`.\n\n**Исправленная версия**\n\n```python\ndef average(xs):\n    \"\"\"\n    Возвращает среднее арифметическое элементов,\n    переданных в виде любого итерируемого объекта (включая генераторы).\n    При пустом вводе бросает ValueError.\n    \"\"\"\n    # Преобразуем к списку, чтобы знать количество элементов\n    items = list(xs)\n    if not items:\n        raise ValueError(\"empty input\")\n    return sum(items) / len(items)\n```\n\n**Тесты‑assert**\n\n```python\nassert average([1, 2, 3, 4]) == 2.5                     # обычный случай\nassert average((x for x in [-5, 0, 5])) == 0.0          # генератор, отрицательные и ноль\ntry:\n    average([])\nexcept ValueError:\n    pass\nelse:\n    assert False, \"should raise ValueError for empty input\"\n```\n\n**Краткое пояснение**  \nМы сначала материализуем итератор в список, чтобы узнать количество элементов. Если список пуст, генерируем `ValueError`. Деление производится на реальное количество элементов, что устраняет деление на ноль и делает функцию совместимой с генераторами.",
+    "paints": 38,
+    "charts": 0,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "en-math",
+    "quality": "PARTIAL",
+    "review": "Bayes 95/590 = 16.1016949% correct. Integral algebra final answer incorrect; not scored as PASS.",
+    "http": 200,
+    "request_id": "413305d8-d785-4261-a126-be819d50d341",
+    "prompt": "In English, compute integral from 0 to 1 of x*ln(1+x) dx by integration by parts, with correct limits. Then a detector flags 95% of defective and 5% of good items, with defect prevalence 1%. Give P(defect|flag) and verify with a population of 10000. Keep both solutions within 220 words.",
+    "answer": "**1. Integral \\(\\displaystyle\\int_{0}^{1} x\\ln(1+x)\\,dx\\)**  \n\nUse integration‑by‑parts with  \n\\(u=\\ln(1+x)\\) → \\(du=\\dfrac{1}{1+x}\\,dx\\)  \n\\(dv=x\\,dx\\) → \\(v=\\dfrac{x^{2}}{2}\\).\n\n\\[\n\\int_{0}^{1} x\\ln(1+x)\\,dx\n=\\Bigl[\\tfrac{x^{2}}{2}\\ln(1+x)\\Bigr]_{0}^{1}\n-\\int_{0}^{1}\\tfrac{x^{2}}{2}\\,\\frac{1}{1+x}\\,dx .\n\\]\n\nThe boundary term is \\(\\frac{1}{2}\\ln2\\) (the lower limit gives 0).  \nWrite the remaining integral as  \n\n\\[\n\\frac12\\int_{0}^{1}\\frac{x^{2}}{1+x}\\,dx\n=\\frac12\\int_{0}^{1}\\!\\bigl(x-1+\\frac{1}{1+x}\\bigr)\\,dx\n=\\frac12\\Bigl[\\tfrac{x^{2}}{2}-x+\\ln(1+x)\\Bigr]_{0}^{1}.\n\\]\n\nEvaluating at 1 gives \\(\\frac12\\bigl(\\tfrac12-1+\\ln2\\bigr)=\\tfrac14-\\tfrac12+\\tfrac12\\ln2\\).\n\nThus  \n\n\\[\n\\int_{0}^{1} x\\ln(1+x)\\,dx\n=\\frac12\\ln2-\\Bigl(\\tfrac14-\\tfrac12+\\tfrac12\\ln2\\Bigr)\n=\\frac14+\\frac12\\ln2\\approx0.5966.\n\\]\n\n---\n\n**2. Detector problem (Bayes’ theorem)**  \n\n- Prevalence: \\(P(D)=0.01,\\;P(G)=0.99\\).  \n- Sensitivity (flag defective): \\(P(F|D)=0.95\\).  \n- False‑positive rate: \\(P(F|G)=0.05\\).\n\nOverall flag probability  \n\n\\[\nP(F)=0.95(0.01)+0.05(0.99)=0.0095+0.0495=0.059.\n\\]\n\nPosterior probability  \n\n\\[\nP(D|F)=\\frac{P(F|D)P(D)}{P(F)}\n=\\frac{0.95\\times0.01}{0.059}\\approx0.1610\\;(16.1\\%).\n\\]\n\n**Verification with 10 000 items**\n\n| Category | Count |\n|----------|-------|\n| Defective (1 %) | 100 |\n| – Flagged (95 %) | 95 |\n| – Not flagged (5 %) | 5 |\n| Good (99 %) | 9 900 |\n| – Flagged (5 %) | 495 |\n| – Not flagged (95 %) | 9 405 |\n| **Total flagged** | 590 |\n| **Defective among flagged** | 95 → \\(95/590≈0.161\\) |\n\nThus the computed \\(P(D|F)=16.1\\%\\) matches the simulated population.",
+    "paints": 0,
+    "charts": 0,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "physics",
+    "quality": "FAIL",
+    "review": "Initial 1024 output cap ended incomplete; readable error. Retained original failure.",
+    "http": 200,
+    "request_id": "b710639a-c544-4d84-95de-8a96a29727c4",
+    "prompt": "A 2 kg block slides from rest 5 m down a 30° slope with kinetic friction 0.2, then stops on a horizontal surface with friction 0.25. g=9.81 m/s². Find slope acceleration, bottom speed, slope friction work and horizontal stopping distance, with formulas and units. Cross-check using energy. Up to 220 words.",
+    "answer": "**1. Acceleration on the 30° slope**  \n\n\\[\n\\begin{aligned}\nN_{\\text{slope}} &= mg\\cos\\theta = (2\\;\\text{kg})(9.81\\;\\text{m/s}^2)\\cos30^\\circ = 16.97\\;\\text{N}\\\\[4pt]\nF_{\\text{fric}} &= \\mu_k N_{\\text{slope}} = 0.20(16.97)=3.39\\;\\text{N}\\\\[4pt]\nF_{\\parallel} &= mg\\sin\\theta = (2)(9.81)\\sin30^\\circ = 9.81\\;\\text{N}\\\\[4pt]\nF_{\\text{net}} &= F_{\\parallel}-F_{\\text{fric}} = 9.81-3.39 = 6.42\\;\\text{N}\\\\[4pt]\na_{\\text{slope}} &= \\frac{F_{\\text{net}}}{m}= \\frac{6.42}{2}= \\boxed{3.21\\;\\text{m/s}^2}\n\\end{aligned}\n\\]\n\n---\n\n**2. Speed at the bottom of the slope**  \n\n\\[\nv^2 = v_0^2 + 2a_{\\text{slope}}s \\qquad (v_0=0,\\; s=5\\;\\text{m})\n\\]\n\n\\[\nv = \\sqrt{2(3.21)(5)} = \\sqrt{32.1}= \\boxed{5.66\\;\\text{m/s}}\n\\]\n\n---\n\n**3. Work done by friction on the slope**  \n\n\\[\nW_{\\text{fric, slope}} = -F_{\\text{fric}}\\,s = -(3.39)(5)=\\boxed{-1.70\\times10^{1}\\;\\text{J}}\n\\]\n\n(The negative sign indicates energy loss.)\n\n---\n\n**4. Stopping distance on the horizontal surface**  \n\nNormal on the horizontal: \\(N = mg = 19.62\\;\\text{N}\\)  \n\n\\[\nF_{\\text{fric, horiz}} = \\mu_h N = 0.25(19.62)=4.91\\;\\text{N}\n\\]\n\nKinetic energy at the bottom:\n\n\\[\nK = \\tfrac12 mv^2 = \\tfrac12(2)(5.66)^2 = 32.1\\;\\text{J}\n\\]\n\nSetting the friction work equal to the kinetic energy (energy lost until stop):\n\n\\[\n-\\,F_{\\text{fric, horiz}}\\,d = -K \\;\\;\\Longrightarrow\\;\\;\nd = \\frac{K}{F_{\\text{fric, horiz}}}= \\frac{32.1}{4.91}= \\boxed{6.5\\;\\text{m}}\n\\]\n\n---\n\n**5. Energy cross‑check**  \n\n",
+    "paints": 56,
+    "charts": 0,
+    "error": "The answer reached the provider limit before it finished. Please retry with a shorter request.\nRetry",
+    "transport": "FAIL"
+  },
+  {
+    "id": "physics-retry",
+    "quality": "PASS",
+    "review": "After raising normal cap to 1536: a=3.21 m/s², v=5.66 m/s, work=-17 J, stop≈6.5 m; independent energy check.",
+    "http": 200,
+    "request_id": "2c65a6fa-fb3f-48d6-b44f-bb98d0d1b56c",
+    "prompt": "A 2 kg block slides from rest 5 m down a 30° slope with kinetic friction 0.2, then stops on a horizontal surface with friction 0.25. g=9.81 m/s². Find slope acceleration, bottom speed, slope friction work and horizontal stopping distance, with formulas and units. Cross-check using energy. Up to 220 words.",
+    "answer": "**Slope (30 °)**\n- Normal force \\(N_s = mg\\cos30° = (2\\;{\\rm kg})(9.81\\;{\\rm m/s^2})\\cos30° = 1.699\\times10^{1}\\;{\\rm N}\\)  \n- Kinetic‑friction force \\(f_s = \\mu_s N_s = 0.20\\,N_s = 3.40\\;{\\rm N}\\) (up the plane)  \n- Gravitational component down the plane \\(F_g = mg\\sin30° = (2)(9.81)\\sin30° = 9.81\\;{\\rm N}\\)  \n- Net force \\(F_{\\rm net}=F_g-f_s = 9.81-3.40 = 6.41\\;{\\rm N}\\)  \n\n\\[\na_s = \\frac{F_{\\rm net}}{m}= \\frac{6.41}{2}= \\boxed{3.21\\;{\\rm m/s^2}}\n\\]\n\n**Speed at the bottom (distance \\(s=5\\) m)**  \n\n\\[\nv^2 = v_0^2 + 2a_s s \\;\\;\\Rightarrow\\;\\; v = \\sqrt{2(3.21)(5)} = \\boxed{5.66\\;{\\rm m/s}}\n\\]\n\n**Work of friction on the slope**  \n\n\\[\nW_{f,s}= -f_s s = -(3.40)(5)= \\boxed{-1.70\\times10^{1}\\;{\\rm J}}\n\\]\n\n---\n\n**Horizontal surface (μ = 0.25)**\n- Normal \\(N_h = mg = 19.62\\;{\\rm N}\\)  \n- Friction \\(f_h = \\mu_h N_h = 0.25(19.62)=4.91\\;{\\rm N}\\) (opposes motion)  \n- Deceleration \\(a_h = f_h/m = 4.91/2 = 2.45\\;{\\rm m/s^2}\\)\n\nStopping distance  \n\n\\[\nd_h = \\frac{v^2}{2a_h}= \\frac{(5.66)^2}{2(2.45)} = \\boxed{6.5\\;{\\rm m}}\n\\]\n\n---\n\n### Energy cross‑check\n- Height drop \\(h = s\\sin30° = 5(0.5)=2.5\\;{\\rm m}\\)  \n- Lost potential \\(mgh = (2)(9.81)(2.5)=49.05\\;{\\rm J}\\)  \n\nTotal friction work  \n\n\\[\nW_{\\rm total}=W_{f,s}+W_{f,h}= -16.99\\;{\\rm J} - (4.91)(6.5\\;{\\rm m}) = -49.0\\;{\\rm J}\n\\]\n\n\\(mgh + W_{\\rm total}=0\\) → final kinetic energy zero, confirming the kinematic results.\n\n**Summary** – slope acceleration ≈ 3.2 m/s², speed at bottom ≈ 5.7 m/s, friction on slope does ≈ ‑17 J of work, and the block slides about **6.5 m** on the horizontal before stopping.",
+    "paints": 36,
+    "charts": 0,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "math-check",
+    "quality": "PASS",
+    "review": "Focused Smart integral: exact 1/4, correct integration by parts, Simpson ≈0.2507 and valid bounds; no expected answer supplied.",
+    "http": 200,
+    "request_id": "98bb6d9f-fa25-4cc9-8ad7-2281bafe7216",
+    "prompt": "Evaluate the definite integral from 0 to 1 of x*ln(1+x) dx. Show integration by parts and simplify the exact result carefully. Independently check the result numerically or by a bound. Under 150 words.",
+    "answer": "**Integration**\n\n\\[\nI=\\int_{0}^{1}x\\ln(1+x)\\,dx\n\\]\n\nTake  \n\n\\[\nu=\\ln(1+x),\\qquad dv=x\\,dx\\;\\Longrightarrow\\;du=\\frac{dx}{1+x},\\;v=\\frac{x^{2}}{2}.\n\\]\n\n\\[\nI=\\Bigl[\\frac{x^{2}}{2}\\ln(1+x)\\Bigr]_{0}^{1}-\\frac12\\int_{0}^{1}\\frac{x^{2}}{1+x}\\,dx.\n\\]\n\nThe first term gives \\(\\frac12\\ln2\\).\n\nDo polynomial division:\n\n\\[\n\\frac{x^{2}}{1+x}=x-1+\\frac{1}{1+x},\n\\]\n\nso  \n\n\\[\n\\int_{0}^{1}\\frac{x^{2}}{1+x}dx=\\int_{0}^{1}(x-1)dx+\\int_{0}^{1}\\frac{dx}{1+x}\n=\\Bigl[\\frac{x^{2}}{2}-x\\Bigr]_{0}^{1}+[\\ln(1+x)]_{0}^{1}\n=-\\frac12+\\ln2 .\n\\]\n\nHence  \n\n\\[\nI=\\frac12\\ln2-\\frac12\\Bigl(-\\frac12+\\ln2\\Bigr)=\\frac14.\n\\]\n\n---\n\n**Numerical check**\n\nUsing Simpson’s rule with \\(f(x)=x\\ln(1+x)\\):\n\n\\[\n\\frac{1}{6}\\bigl(f(0)+4f(0.5)+f(1)\\bigr)\n=\\frac{1}{6}\\bigl(0+4(0.2028)+0.6931\\bigr)=0.2507\\approx\\frac14.\n\\]\n\nA simple bound: \\(\\;x-\\frac{x^{2}}2\\le\\ln(1+x)\\le x\\) on \\([0,1]\\) gives  \n\n\\[\n\\frac{5}{24}\\approx0.208 \\le I \\le \\frac13\\approx0.333,\n\\]\n\nand the exact value \\(0.25\\) lies inside.\n\n**Result**\n\n\\[\n\\boxed{\\displaystyle\\int_{0}^{1}x\\ln(1+x)\\,dx=\\frac14}\n\\]",
+    "paints": 31,
+    "charts": 0,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "files-charts",
+    "quality": "PASS",
+    "review": "TXT/DOCX 17 min, Mira, amber; PDF 73%; XLSX/CSV monthly 120,150,-20,310 total560. Four rendered chart types/data checked.",
+    "http": 200,
+    "request_id": "dce783b2-3662-4977-92cd-5f8f7fb4d02c",
+    "prompt": "Using the attachments, state the migration window, owner and fallback color with TXT/DOCX citations; retention percentage with PDF citation. List CSV monthly revenues and their total, verify XLSX agrees. Render FOUR compact chart JSON blocks: line using the monthly revenues; bar North=12 South=-4 East=8; pie A=50 B=30 C=20; scatter A=(1,2) B=(2,5) C=(3,4). Use type,title,data, label/value for line/bar/pie and label/x/y for scatter. No extra tutorial, keep prose under 100 words.",
+    "answer": "Migration window: **17 minutes** 【TXT】, **17 minutes** 【DOCX】  \nOwner: **Mira** 【TXT】, **Mira** 【DOCX】  \nFallback color: **amber** 【TXT】, **amber** 【DOCX】  \nRetention: **73 %** 【PDF】\n\nCSV revenues: Jan 120, Feb 150, Mar ‑20, Apr 310 → **total 560**. The XLSX sheet lists the same values, so they agree 【XLSX】.\n\n```chart\n{\n  \"type\":\"line\",\n  \"title\":\"Monthly Revenues\",\n  \"data\":[\n    {\"label\":\"Jan\",\"value\":120},\n    {\"label\":\"Feb\",\"value\":150},\n    {\"label\":\"Mar\",\"value\":-20},\n    {\"label\":\"Apr\",\"value\":310}\n  ]\n}\n```\n```chart\n{\n  \"type\":\"bar\",\n  \"title\":\"Regional Adjustments\",\n  \"data\":[\n    {\"label\":\"North\",\"value\":12},\n    {\"label\":\"South\",\"value\":-4},\n    {\"label\":\"East\",\"value\":8}\n  ]\n}\n```\n```chart\n{\n  \"type\":\"pie\",\n  \"title\":\"Category Share\",\n  \"data\":[\n    {\"label\":\"A\",\"value\":50},\n    {\"label\":\"B\",\"value\":30},\n    {\"label\":\"C\",\"value\":20}\n  ]\n}\n```\n```chart\n{\n  \"type\":\"scatter\",\n  \"title\":\"Points Plot\",\n  \"data\":[\n    {\"label\":\"A\",\"x\":1,\"y\":2},\n    {\"label\":\"B\",\"x\":2,\"y\":5},\n    {\"label\":\"C\",\"x\":3,\"y\":4}\n  ]\n}\n```",
+    "paints": 36,
+    "charts": 4,
+    "error": "",
+    "transport": "COMPLETE"
+  },
+  {
+    "id": "flow-project",
+    "provider": "groq",
+    "quality": "PASS",
+    "requestId": "66f661b7-e3d8-43fb-bea7-05790ac8f8bc",
+    "chatId": "6b341aed-efe0-4023-950b-d66886a18387",
+    "answer": "GROQ-CHECK-527  \n\nMigration window: 17 minutes【notes.txt】\nRollback owner: Mira【notes.txt】\nFallback color: amber【notes.txt】",
+    "error": "",
+    "chatUrl": "http://localhost:3002/?chat=6b341aed-efe0-4023-950b-d66886a18387",
+    "reloadContext": true
+  },
+  {
+    "id": "flow-memory",
+    "provider": "groq",
+    "quality": "PASS",
+    "enabled": {
+      "requestId": "c7e1e149-91b5-4017-92d1-c80d638e67c4",
+      "chatId": "77593bd0-7134-4d4a-becf-9e08872fdc91",
+      "answer": "GROQ-CHECK-527  \nYour current live‑QA project codename is Copper Cedar 826.",
+      "error": "",
+      "chatUrl": "http://localhost:3002/?chat=77593bd0-7134-4d4a-becf-9e08872fdc91"
+    },
+    "disabled": {
+      "requestId": "03da042a-b410-43e3-973f-74f88bc86067",
+      "chatId": "06b0b095-2b67-457e-81b6-749dda6ea9b6",
+      "answer": "GROQ-CHECK-527  \nUNKNOWN",
+      "error": "",
+      "chatUrl": "http://localhost:3002/?chat=06b0b095-2b67-457e-81b6-749dda6ea9b6"
+    }
+  },
+  {
+    "id": "flow-stop-regenerate",
+    "provider": "groq",
+    "quality": "PASS",
+    "requestId": "9aea0e6e-aaa2-4656-b0a3-e4561c24fb08",
+    "chatId": "f3fef867-24e2-4fb0-9b6f-58259467a0e5",
+    "stopMs": 409,
+    "beforeLength": 223,
+    "partialLength": 240,
+    "regenerated": "GROQ-CHECK-527\n\nI’m sorry, but the project instructions require that my response be under 100 words, and a 350‑word tutorial exceeds that limit. I can provide a concise summary of Python iterators in eight numbered points if that would help.",
+    "regenerateHttp": 200,
+    "error": "",
+    "reloadPreserved": true
+  },
+  {
+    "id": "flow-retry-errors",
+    "provider": "groq",
+    "quality": "PASS",
+    "errors": [
+      {
+        "code": "rate_limit",
+        "error": "The AI quota is temporarily exhausted. Please try again later.\nRetry",
+        "retryVisible": true,
+        "source": "controlled browser SSE fixture"
+      },
+      {
+        "code": "timeout",
+        "error": "The response took too long. Try again.\nRetry",
+        "retryVisible": true,
+        "source": "controlled browser SSE fixture"
+      },
+      {
+        "code": "upstream_error",
+        "error": "The AI service returned an error. Please try again.\nRetry",
+        "retryVisible": true,
+        "source": "controlled browser SSE fixture"
+      }
+    ],
+    "recovered": {
+      "requestId": "bcbc8686-855d-4c2d-ab9d-935be79c019b",
+      "chatId": "36e82a69-a0dc-47ec-bfe9-a4dadf379429",
+      "answer": "GROQ-CHECK-527 RETRY-OK",
+      "error": "",
+      "chatUrl": "http://localhost:3002/?chat=36e82a69-a0dc-47ec-bfe9-a4dadf379429"
+    },
+    "userMessages": 1,
+    "initial_harness_quality": "FAIL",
+    "review": "Retry returned GROQ-CHECK-527 RETRY-OK with one user message and no error. Active Project instructions require that prefix; initial exact-match assertion ignored it. Fixtures are not real upstream outages."
+  },
+  {
+    "id": "flow-two-tabs",
+    "provider": "groq",
+    "quality": "PASS",
+    "a": {
+      "requestId": "03a0b715-084b-4f2a-996f-fe2bb337af60",
+      "chatId": "19aa5f0f-29ae-42f8-8b53-92c5544e7b08",
+      "answer": "GROQ-CHECK-527 ALFA=703",
+      "error": "",
+      "chatUrl": "http://localhost:3002/?chat=19aa5f0f-29ae-42f8-8b53-92c5544e7b08"
+    },
+    "b": {
+      "requestId": "bbdaa708-c6d4-4833-ad2a-aa16accbe344",
+      "chatId": "deedaf3d-e974-4906-9bcd-e8daa10e7018",
+      "answer": "GROQ-CHECK-527  \nBETA=320",
+      "error": "",
+      "chatUrl": "http://localhost:3002/?chat=deedaf3d-e974-4906-9bcd-e8daa10e7018"
+    },
+    "savedA": "GROQ-CHECK-527 ALFA=703",
+    "savedB": "GROQ-CHECK-527  \nBETA=320"
+  },
+  {
+    "id": "voice",
+    "http": 200,
+    "response": {
+      "text": "The access code is 742. Testing speech transcription.",
+      "demo": false
+    },
+    "request_id": "4445896803b749bd938b4a5504ba016b",
+    "quality": "PASS"
+  }
+]

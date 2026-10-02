@@ -1,0 +1,15 @@
+{
+  "ready_status": 200,
+  "provider": "groq",
+  "text_live": true,
+  "voice": true,
+  "models": {
+    "text": "openai/gpt-oss-120b",
+    "vision": "qwen/qwen3.8-27b",
+    "transcription": "whisper-large-v3-turbo"
+  },
+  "backend_key_present": true,
+  "entrypoint": "standard app.main restored",
+  "provider_requests": 0,
+  "qa_role": "user"
+}

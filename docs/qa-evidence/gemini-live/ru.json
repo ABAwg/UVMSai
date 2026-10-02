@@ -1,0 +1,26 @@
+{
+  "id": "ru",
+  "prompt": "Помоги спланировать учебную неделю. У меня работа с 9:00 до 18:00 по будням, дорога занимает 40 минут в каждую сторону. Нужно выделить 6 часов на Python, 3 часа на английский и три тренировки по 45 минут. Я хочу спать с 23:00 до 7:00 и оставить субботний вечер свободным. Предложи реалистичное расписание с перерывами и ужином, проверь суммарные часы и объясни один компромисс. Ответ по-русски, до 450 слов.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "e80c83f2-7de5-464a-bbf2-4eebf9aad992",
+  "chatId": "2556b208-bd70-4ab5-9a5d-14095a412bbe",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=2556b208-bd70-4ab5-9a5d-14095a412bbe",
+  "durationMs": 7076,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

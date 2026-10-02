@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "UVMS AI",
+    "slug": "uvms-ai",
+    "version": "1.4.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "uvmsai",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "uz.uvms.ai"
+    },
+    "android": {
+      "package": "uz.uvms.ai",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#07110F"
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "UVMS AI uses your photos when you attach an image to a chat.",
+          "cameraPermission": "UVMS AI uses the camera when you take a photo to analyze."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "UVMS AI uses your microphone when you dictate a message."
+        }
+      ],
+      "expo-status-bar",
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#07110F"
+        }
+      ]
+    ]
+  }
+}

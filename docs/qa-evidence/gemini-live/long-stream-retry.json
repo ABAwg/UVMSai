@@ -1,0 +1,26 @@
+{
+  "id": "long-stream-retry",
+  "prompt": "Write a practical English guide, about 1000 words, for reviewing a small FastAPI + React pull request. Use 10 numbered sections with specific examples, including authorization, validation, concurrency, streaming cancellation, file handling, database transactions, UI accessibility, tests, observability and rollout. Include two short fenced code snippets. Do not claim to execute tests.",
+  "provider": "gemini",
+  "quality": "FAIL",
+  "pageErrors": [],
+  "httpStatus": 200,
+  "requestId": "bc3bb896-cda9-4839-889e-f973c5fe6bde",
+  "chatId": "8eb05aa7-6d87-4e82-ac26-f0bddf1d56da",
+  "answer": "",
+  "error": "The AI service returned an error. Please try again.\nRetry",
+  "sseEvents": [
+    "meta",
+    "error"
+  ],
+  "transport": "FAIL",
+  "code": [],
+  "charts": 0,
+  "math": 0,
+  "chartTables": [],
+  "paints": [],
+  "chatUrl": "http://localhost:3002/?chat=8eb05aa7-6d87-4e82-ac26-f0bddf1d56da",
+  "durationMs": 6445,
+  "upstream_http_status": 503,
+  "review": "No complete usable Gemini response. HTTP 503 provider unavailable."
+}

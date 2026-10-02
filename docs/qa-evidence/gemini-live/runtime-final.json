@@ -1,0 +1,13 @@
+{
+  "ready_status": 200,
+  "provider": "gemini",
+  "text_live": true,
+  "models": {
+    "fast": "gemini-3.8-flash",
+    "balanced": "gemini-3.8-flash",
+    "deep": "gemini-3.8-flash"
+  },
+  "backend_key_present": true,
+  "provider_requests": 0,
+  "entrypoint": "standard app.main restored"
+}
