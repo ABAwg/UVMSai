@@ -12,7 +12,7 @@
     "start:lan": "expo start --lan --clear"
   },
   "dependencies": {
-    "expo": "~57.0.26",
+    "expo": "~58.0.5",
     "expo-asset": "~57.0.18",
     "expo-audio": "~57.0.5",
     "expo-constants": "~57.0.20",
